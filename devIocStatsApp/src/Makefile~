@@ -8,20 +8,12 @@ include $(TOP)/configure/CONFIG
 
 LIBRARY_IOC += devIocStats
 
-# For DTYP="IOC stats"
+# xxxRecord.dbd will be installed into <top>/dbd
 DBD += devIocStats.dbd
-# For DTYP="VX stats"
-DBD += devVxStats.dbd
 
-INC += devIocStatsOSD.h
+# lakeshore340.dbd will be created from these files
+devIocStats_DBD += base.dbd
 
-# devIocStats.dbd will be created from these files
-#devIocStats_DBD += base.dbd
-
-devIocStats_SRCS += devIocStatsAnalog.c
-devIocStats_SRCS += devIocStatsString.c
-devIocStats_SRCS += devIocStatsTest.c
-devIocStats_SRCS += devIocStatsOSD.c
 # We need to link against the EPICS Base libraries
 devIocStats_LIBS += $(EPICS_BASE_IOC_LIBS)
 
