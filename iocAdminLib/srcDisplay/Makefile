@@ -22,6 +22,8 @@ EDLS += ioc_softreset_confirm_soft.edl
 EDLS += ioc_softreset_confirm_wiener21.edl
 EDLS += ioc_softreset_confirm_wiener7.edl
 
+DATA += $(EDLS)
+
 include $(TOP)/configure/RULES
 #----------------------------------------
 #  ADD RULES AFTER THIS LINE
