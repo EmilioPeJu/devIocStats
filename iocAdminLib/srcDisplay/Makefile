@@ -22,6 +22,9 @@ EDLS += ioc_softreset_confirm_soft.edl
 EDLS += ioc_softreset_confirm_wiener21.edl
 EDLS += ioc_softreset_confirm_wiener7.edl
 
+# Top level display for all BL GW IOCs
+EDLS += BLGWStatus.edl
+
 DATA += $(EDLS)
 
 include $(TOP)/configure/RULES
