@@ -10,7 +10,6 @@ endif
 
 CONFIG=$(EPICS_BASE)/configure
 include $(CONFIG)/CONFIG
--include $(CONFIG)/CONFIG.Dls
 
 # Override for definition in base
 INSTALL_LOCATION = $(TOP)
