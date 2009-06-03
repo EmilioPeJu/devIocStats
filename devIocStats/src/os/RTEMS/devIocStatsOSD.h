@@ -52,24 +52,49 @@
 #include <rtems/libcsupport.h>
 #include <rtems/libio_.h>
 #include <rtems/rtems_bsdnet.h>
+#include <sys/mbuf.h>
+#include <sys/socket.h>
+#include <net/if.h>
+#include <net/if_var.h>
+
 #undef malloc
 #undef free
 
-#define kernelVersion() "RTEMS-"RTEMS_VERSION
-#define sysBspRev()     "<Unimplemented>"
+#include <string.h>
+#include <stdlib.h>
 
-#define MAX_FILES   rtems_libio_number_iops
 #define sysBootLine rtems_bsdnet_bootp_cmdline
-#define FDTABLE_INUSE(i) (rtems_libio_iops[i].flags & LIBIO_FLAGS_OPEN)
 /* Override default STARTUP environment variable to use INIT */
 #undef  STARTUP
 #define STARTUP "INIT"
 #define CLUSTSIZES 2 /* only regular mbufs and clusters */
 
+/* Heap implementation changed; we should use
+ * malloc_free_space() which handles these changes
+ * transparently but then we don't get the
+ * 'bytesUsed' information.
+ */
+# if   (__RTEMS_MAJOR__ > 4) \
+   || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ > 7)
+#define RTEMS_MALLOC_IS_HEAP
+#include <rtems/score/protectedheap.h>
+typedef char objName[13];
+#define RTEMS_OBJ_GET_NAME(tc,name) rtems_object_get_name((tc)->Object.id, sizeof(name),(name))
+#ifdef SSRLAPPSMISCUTILS
+#define USE_SSRLAPPSMISCUTILS
+extern int isnan();
+#include <ssrlAppsMiscUtils.h>
+#endif
+# else
+typedef char * objName;
+#define RTEMS_OBJ_GET_NAME(tc,name) name = (tc)->Object.name
+# endif
+
 #ifdef RTEMS_BSP_PGM_EXEC_AFTER /* only defined on uC5282 */
 #define reboot(x) bsp_reset(0)
 #elif   (__RTEMS_MAJOR__ > 4) \
-     || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ > 8)
+         || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ > 9) \
+         || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ == 9 && __RTEMS_REVISION__ > 0)
 #define reboot(x) bsp_reset()
 #else
 #define reboot(x) rtemsReboot()
@@ -78,11 +103,3 @@
 #ifndef  SECONDS_TO_BURN
 #define SECONDS_TO_BURN 0
 #endif
-
-typedef struct {
-  unsigned long numBytesFree;
-  unsigned long numBytesAlloc;
-  unsigned long numBlocksFree;  /* not supported */
-  unsigned long numBlocksAlloc; /* not supported */
-  unsigned long maxBlockSizeFree;
-} memInfo;

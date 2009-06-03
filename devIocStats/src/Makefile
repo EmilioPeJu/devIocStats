@@ -1,4 +1,4 @@
-TOP=../..
+TOP=..
 
 include $(TOP)/configure/CONFIG
 #----------------------------------------
@@ -24,11 +24,23 @@ INC += devIocStatsOSD.h
 
 LIBRARY_IOC = devIocStats
 
-devIocStats_SRCS += devIocStatsAnalog.c
-devIocStats_SRCS += devIocStatsString.c
-devIocStats_SRCS += devIocStatsTest.c
-devIocStats_SRCS += devIocStatsOSD.c
-devIocStats_LIBS = $(EPICS_BASE_IOC_LIBS)
+# OSI parts
+SRCS += devIocStatsAnalog.c
+SRCS += devIocStatsString.c
+SRCS += devIocStatsTest.c
+
+# OSD parts
+SRCS += osdCpuUsage.c
+SRCS += osdFdUsage.c
+SRCS += osdMemUsage.c
+SRCS += osdClustInfo.c
+SRCS += osdSuspTasks.c
+SRCS += osdIFErrors.c
+SRCS += osdBootInfo.c
+SRCS += osdSystemInfo.c
+SRCS += osdHostInfo.c
+
+LIBS = $(EPICS_BASE_IOC_LIBS)
 
 #===========================
 
