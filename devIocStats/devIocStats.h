@@ -50,6 +50,7 @@
 typedef int clustInfo[CLUSTSIZES][4];
 
 typedef struct {
+    unsigned long numBytesTotal;
     unsigned long numBytesFree;
     unsigned long numBytesAlloc;
     unsigned long numBlocksFree;

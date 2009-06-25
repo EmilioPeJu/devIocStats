@@ -181,6 +181,7 @@ static void statsFreeBlocks(double*);
 static void statsAllocBytes(double*);
 static void statsAllocBlocks(double*);
 static void statsMaxFree(double*);
+static void statsTotalBytes(double*);
 static void statsCpuUsage(double*);
 static void statsSuspendedTasks(double*);
 static void statsFdUsage(double*);
@@ -205,6 +206,7 @@ static validGetParms statsGetParms[]={
 	{ "max_free",		   	statsMaxFree,		MEMORY_TYPE },
 	{ "allocated_bytes",		statsAllocBytes,	MEMORY_TYPE },
 	{ "allocated_blocks",		statsAllocBlocks,	MEMORY_TYPE },
+        { "total_bytes",		statsTotalBytes,	MEMORY_TYPE },
         { "cpu",			statsCpuUsage,		LOAD_TYPE },
 	{ "suspended_tasks",		statsSuspendedTasks,	LOAD_TYPE },
 	{ "fd",				statsFdUsage,		FD_TYPE },
@@ -237,7 +239,7 @@ epicsExportAddress(dset,devAoStats);
 aStats devAiClusts = {6,NULL,ai_clusts_init,ai_clusts_init_record,NULL,ai_clusts_read,NULL };
 epicsExportAddress(dset,devAiClusts);
 
-static memInfo meminfo = {0,0,0,0,0};
+static memInfo meminfo = {0,0,0,0,0,0};
 static scanInfo scan[TOTAL_TYPES] = {{0}};
 static fdInfo fdusage = {0,0};
 static int recordnumber = 0;
@@ -559,6 +561,11 @@ static void statsMaxFree(double* val)
 {
 	read_mem_stats();
 	*val=(double)meminfo.maxBlockSizeFree;
+}
+static void statsTotalBytes(double* val)
+{
+    read_mem_stats();
+    *val=(double)meminfo.numBytesTotal;
 }
 static void statsCpuUsage(double* val)
 {

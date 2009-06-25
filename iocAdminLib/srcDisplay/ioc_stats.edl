@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 196
-y 17
+x 455
+y 88
 w 540
-h 700
+h 730
 font "helvetica-bold-r-18.0"
 ctlFont "helvetica-bold-r-18.0"
 btnFont "helvetica-bold-r-18.0"
@@ -45,7 +45,7 @@ major 4
 minor 0
 release 0
 x 320
-y 495
+y 520
 w 180
 h 75
 lineColor index 14
@@ -131,7 +131,7 @@ major 4
 minor 1
 release 0
 x 10
-y 95
+y 100
 w 56
 h 16
 font "helvetica-bold-r-14.0"
@@ -151,12 +151,13 @@ major 10
 minor 0
 release 0
 x 120
-y 55
+y 60
 w 195
 h 15
 controlPv "$(ioc):STARTTOD"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -169,7 +170,7 @@ major 4
 minor 1
 release 0
 x 10
-y 55
+y 60
 w 88
 h 16
 font "helvetica-bold-r-14.0"
@@ -209,7 +210,7 @@ major 4
 minor 0
 release 0
 x 0
-y 225
+y 250
 w 540
 h 1
 lineColor index 14
@@ -223,7 +224,7 @@ major 4
 minor 0
 release 0
 x 0
-y 320
+y 345
 w 540
 h 1
 lineColor index 14
@@ -237,7 +238,7 @@ major 4
 minor 1
 release 0
 x 10
-y 75
+y 80
 w 90
 h 16
 font "helvetica-bold-r-14.0"
@@ -257,12 +258,13 @@ major 10
 minor 0
 release 0
 x 120
-y 75
+y 80
 w 195
 h 15
 controlPv "$(ioc):TOD"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -275,12 +277,13 @@ major 10
 minor 0
 release 0
 x 120
-y 95
+y 100
 w 195
 h 15
 controlPv "$(ioc):UPTIME"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -393,7 +396,7 @@ major 4
 minor 1
 release 0
 x 10
-y 115
+y 120
 w 67
 h 16
 font "helvetica-bold-r-14.0"
@@ -413,12 +416,13 @@ major 10
 minor 0
 release 0
 x 120
-y 115
+y 120
 w 195
 h 15
 controlPv "$(ioc):HEARTBEAT"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -431,7 +435,7 @@ major 4
 minor 1
 release 0
 x 10
-y 135
+y 160
 w 75
 h 16
 font "helvetica-bold-r-14.0"
@@ -451,12 +455,13 @@ major 10
 minor 0
 release 0
 x 120
-y 135
+y 160
 w 195
 h 15
 controlPv "$(ioc):HOSTNAME"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -469,12 +474,13 @@ major 10
 minor 0
 release 0
 x 120
-y 175
+y 200
 w 300
 h 15
 controlPv "$(ioc):LOCATION"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -487,7 +493,7 @@ major 4
 minor 1
 release 0
 x 10
-y 175
+y 200
 w 60
 h 16
 font "helvetica-bold-r-14.0"
@@ -507,7 +513,7 @@ major 4
 minor 1
 release 0
 x 10
-y 155
+y 180
 w 76
 h 16
 font "helvetica-bold-r-14.0"
@@ -527,12 +533,13 @@ major 10
 minor 0
 release 0
 x 120
-y 155
+y 180
 w 300
 h 15
 controlPv "$(ioc):ENGINEER"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -545,12 +552,13 @@ major 10
 minor 0
 release 0
 x 120
-y 230
+y 255
 w 310
 h 15
 controlPv "$(ioc):EPICS_VERS"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -563,7 +571,7 @@ major 4
 minor 1
 release 0
 x 10
-y 230
+y 255
 w 102
 h 16
 font "helvetica-bold-r-14.0"
@@ -583,12 +591,13 @@ major 10
 minor 0
 release 0
 x 10
-y 265
+y 290
 w 260
 h 15
 controlPv "$(ioc):APP_DIR1"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -601,7 +610,7 @@ major 4
 minor 1
 release 0
 x 190
-y 250
+y 275
 w 148
 h 16
 font "helvetica-bold-r-14.0"
@@ -621,12 +630,13 @@ major 10
 minor 0
 release 0
 x 270
-y 265
+y 290
 w 260
 h 15
 controlPv "$(ioc):APP_DIR2"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -639,12 +649,13 @@ major 10
 minor 0
 release 0
 x 270
-y 300
+y 325
 w 260
 h 15
 controlPv "$(ioc):ST_SCRIPT2"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -657,12 +668,13 @@ major 10
 minor 0
 release 0
 x 10
-y 300
+y 325
 w 260
 h 15
 controlPv "$(ioc):ST_SCRIPT1"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -675,7 +687,7 @@ major 4
 minor 1
 release 0
 x 205
-y 285
+y 310
 w 98
 h 16
 font "helvetica-bold-r-14.0"
@@ -695,12 +707,13 @@ major 10
 minor 0
 release 0
 x 120
-y 345
+y 370
 w 310
 h 15
 controlPv "$(ioc):KERNEL_VERS"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -713,7 +726,7 @@ major 4
 minor 1
 release 0
 x 10
-y 345
+y 370
 w 103
 h 16
 font "helvetica-bold-r-14.0"
@@ -733,12 +746,13 @@ major 10
 minor 0
 release 0
 x 120
-y 365
+y 390
 w 310
 h 15
 controlPv "$(ioc):BSP_REV"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -751,7 +765,7 @@ major 4
 minor 1
 release 0
 x 10
-y 365
+y 390
 w 101
 h 16
 font "helvetica-bold-r-14.0"
@@ -771,7 +785,7 @@ major 4
 minor 1
 release 0
 x 160
-y 325
+y 350
 w 204
 h 16
 font "helvetica-bold-r-14.0"
@@ -791,12 +805,13 @@ major 10
 minor 0
 release 0
 x 270
-y 400
+y 425
 w 260
 h 15
 controlPv "$(ioc):BOOTLINE2"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -809,12 +824,13 @@ major 10
 minor 0
 release 0
 x 10
-y 400
+y 425
 w 260
 h 15
 controlPv "$(ioc):BOOTLINE1"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -827,7 +843,7 @@ major 4
 minor 1
 release 0
 x 230
-y 385
+y 410
 w 66
 h 16
 font "helvetica-bold-r-14.0"
@@ -847,12 +863,13 @@ major 10
 minor 0
 release 0
 x 270
-y 420
+y 445
 w 260
 h 15
 controlPv "$(ioc):BOOTLINE4"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -865,12 +882,13 @@ major 10
 minor 0
 release 0
 x 10
-y 420
+y 445
 w 260
 h 15
 controlPv "$(ioc):BOOTLINE3"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -883,12 +901,13 @@ major 10
 minor 0
 release 0
 x 270
-y 440
+y 465
 w 260
 h 15
 controlPv "$(ioc):BOOTLINE6"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -901,12 +920,13 @@ major 10
 minor 0
 release 0
 x 10
-y 440
+y 465
 w 260
 h 15
 controlPv "$(ioc):BOOTLINE5"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-12.0"
@@ -937,7 +957,7 @@ major 4
 minor 0
 release 0
 x 240
-y 195
+y 220
 w 195
 h 25
 fgColor index 49
@@ -961,7 +981,7 @@ major 4
 minor 1
 release 0
 x 350
-y 525
+y 550
 w 31
 h 16
 font "helvetica-bold-r-14.0"
@@ -981,7 +1001,7 @@ major 10
 minor 0
 release 0
 x 405
-y 520
+y 545
 w 85
 h 25
 controlPv "$(ioc):FD_FREE"
@@ -1001,12 +1021,13 @@ major 10
 minor 0
 release 0
 x 405
-y 550
+y 575
 w 65
 h 15
 controlPv "$(ioc):FD_MAX"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -1020,7 +1041,7 @@ major 4
 minor 1
 release 0
 x 350
-y 550
+y 575
 w 28
 h 16
 font "helvetica-bold-r-14.0"
@@ -1040,7 +1061,7 @@ major 4
 minor 1
 release 0
 x 345
-y 500
+y 525
 w 124
 h 16
 font "helvetica-bold-r-14.0"
@@ -1060,7 +1081,7 @@ major 4
 minor 0
 release 0
 x 320
-y 460
+y 485
 w 180
 h 35
 lineColor index 14
@@ -1074,7 +1095,7 @@ major 10
 minor 0
 release 0
 x 405
-y 465
+y 490
 w 85
 h 25
 controlPv "$(ioc):LOAD"
@@ -1093,7 +1114,7 @@ major 4
 minor 1
 release 0
 x 325
-y 470
+y 495
 w 70
 h 16
 font "helvetica-bold-r-14.0"
@@ -1113,7 +1134,7 @@ major 4
 minor 0
 release 0
 x 25
-y 460
+y 485
 w 295
 h 110
 lineColor index 14
@@ -1127,7 +1148,7 @@ major 4
 minor 1
 release 0
 x 80
-y 485
+y 510
 w 31
 h 16
 font "helvetica-bold-r-14.0"
@@ -1147,12 +1168,13 @@ major 10
 minor 0
 release 0
 x 130
-y 485
+y 510
 w 100
 h 15
 controlPv "$(ioc):MEM_FREE"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -1166,12 +1188,13 @@ major 10
 minor 0
 release 0
 x 130
-y 505
+y 530
 w 100
 h 15
 controlPv "$(ioc):MEM_USED"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -1185,7 +1208,7 @@ major 4
 minor 1
 release 0
 x 80
-y 505
+y 530
 w 36
 h 16
 font "helvetica-bold-r-14.0"
@@ -1205,7 +1228,7 @@ major 4
 minor 1
 release 0
 x 90
-y 465
+y 490
 w 121
 h 16
 font "helvetica-bold-r-14.0"
@@ -1225,7 +1248,7 @@ major 4
 minor 1
 release 0
 x 35
-y 525
+y 550
 w 87
 h 32
 font "helvetica-bold-r-14.0"
@@ -1246,7 +1269,7 @@ major 10
 minor 0
 release 0
 x 130
-y 530
+y 555
 w 130
 h 25
 controlPv "$(ioc):MEM_BLK_FREE"
@@ -1266,7 +1289,7 @@ major 4
 minor 0
 release 0
 x 320
-y 570
+y 595
 w 180
 h 100
 lineColor index 14
@@ -1280,7 +1303,7 @@ major 4
 minor 1
 release 0
 x 340
-y 595
+y 620
 w 36
 h 16
 font "helvetica-bold-r-14.0"
@@ -1300,7 +1323,7 @@ major 10
 minor 0
 release 0
 x 405
-y 595
+y 620
 w 80
 h 15
 controlPv "$(ioc):IFI_ERR_CNT"
@@ -1310,6 +1333,7 @@ fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
+fontAlign "center"
 endObjectProperties
 
 # (Textupdate)
@@ -1319,15 +1343,17 @@ major 10
 minor 0
 release 0
 x 405
-y 615
+y 640
 w 80
 h 15
 controlPv "$(ioc):IFO_ERR_CNT"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
+fontAlign "center"
 endObjectProperties
 
 # (Static Text)
@@ -1337,7 +1363,7 @@ major 4
 minor 1
 release 0
 x 340
-y 615
+y 640
 w 49
 h 16
 font "helvetica-bold-r-14.0"
@@ -1357,7 +1383,7 @@ major 4
 minor 1
 release 0
 x 355
-y 575
+y 600
 w 74
 h 16
 font "helvetica-bold-r-14.0"
@@ -1377,7 +1403,7 @@ major 4
 minor 0
 release 0
 x 25
-y 570
+y 595
 w 295
 h 100
 lineColor index 14
@@ -1391,7 +1417,7 @@ major 4
 minor 1
 release 0
 x 35
-y 625
+y 650
 w 48
 h 16
 font "helvetica-bold-r-14.0"
@@ -1411,7 +1437,7 @@ major 10
 minor 0
 release 0
 x 210
-y 620
+y 645
 w 85
 h 25
 controlPv "$(ioc):DAT_MBUF_FREE"
@@ -1430,12 +1456,13 @@ major 10
 minor 0
 release 0
 x 210
-y 650
+y 675
 w 85
 h 15
 controlPv "$(ioc):DAT_MBUF_MAX"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -1449,7 +1476,7 @@ major 4
 minor 1
 release 0
 x 35
-y 650
+y 675
 w 28
 h 16
 font "helvetica-bold-r-14.0"
@@ -1469,7 +1496,7 @@ major 4
 minor 1
 release 0
 x 165
-y 580
+y 605
 w 51
 h 16
 font "helvetica-bold-r-14.0"
@@ -1489,7 +1516,7 @@ major 4
 minor 1
 release 0
 x 230
-y 600
+y 625
 w 38
 h 16
 font "helvetica-bold-r-14.0"
@@ -1509,7 +1536,7 @@ major 10
 minor 0
 release 0
 x 100
-y 620
+y 645
 w 85
 h 25
 controlPv "$(ioc):SYS_MBUF_FREE"
@@ -1528,12 +1555,13 @@ major 10
 minor 0
 release 0
 x 100
-y 650
+y 675
 w 85
 h 15
 controlPv "$(ioc):SYS_MBUF_MAX"
 displayMode "decimal"
 fgColor index 14
+fgAlarm
 bgColor index 4
 fill
 font "helvetica-bold-r-14.0"
@@ -1547,7 +1575,7 @@ major 4
 minor 1
 release 0
 x 115
-y 600
+y 625
 w 51
 h 16
 font "helvetica-bold-r-14.0"
@@ -1567,7 +1595,7 @@ major 4
 minor 2
 release 0
 x 35
-y 575
+y 600
 w 70
 h 25
 fgColor index 1
@@ -1596,7 +1624,7 @@ major 4
 minor 1
 release 0
 x 30
-y 675
+y 700
 w 196
 h 16
 font "helvetica-bold-r-14.0"
@@ -1616,7 +1644,7 @@ major 4
 minor 1
 release 0
 x 10
-y 200
+y 225
 w 39
 h 16
 font "helvetica-bold-r-14.0"
@@ -1636,7 +1664,7 @@ major 4
 minor 0
 release 0
 x 90
-y 195
+y 220
 w 140
 h 25
 fgColor index 14
@@ -1655,7 +1683,7 @@ major 4
 minor 2
 release 0
 x 445
-y 195
+y 220
 w 90
 h 25
 fgColor index 14
@@ -1681,9 +1709,9 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 370
-y 10
-w 95
+x 425
+y 150
+w 110
 h 25
 fgColor index 1
 bgColor index 44
@@ -1711,7 +1739,7 @@ major 4
 minor 2
 release 0
 x 425
-y 155
+y 180
 w 110
 h 25
 fgColor index 1
@@ -1728,5 +1756,44 @@ displayFileName {
 setPosition {
   0 "parentWindow"
 }
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 10
+y 140
+w 72
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+value {
+  "# Records"
+}
+autoSize
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 120
+y 140
+w 195
+h 15
+controlPv "$(ioc):RECORD_CNT"
+displayMode "decimal"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-bold-r-14.0"
 endObjectProperties
 

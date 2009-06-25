@@ -48,7 +48,7 @@ int devIocStatsGetPwd (char **pval)
 
 int devIocStatsGetHostname (char **pval)
 {
-    if (!gethostname(host, HOST_NAME_MAX)) {
+    if (gethostname(host, HOST_NAME_MAX) == -1) {
         *pval = notavail;
         return -1;
     } else {

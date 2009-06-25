@@ -25,7 +25,7 @@
 
 #include <devIocStats.h>
 
-static memInfo nope = { 0, 0, 0, 0, 0 };
+static memInfo nope = { 0, 0, 0, 0, 0, 0 };
 
 int devIocStatsInitMemUsage (void) { return OK; }
 
@@ -61,8 +61,9 @@ int devIocStatsGetMemUsage (memInfo *pmi) {
     }
     pmi->numBytesAlloc = 2 * partId->curWordsAllocated;
     pmi->numBlocksAlloc = partId->curBlocksAllocated;
-
     semGive (&partId->sem);
+
+    pmi->numBytesTotal = sysPhysMemTop();
     return (OK);
 #endif
 }
