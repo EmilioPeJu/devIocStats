@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1153
-y 429
+x 760
+y 1646
 w 712
 h 662
 font "arial-medium-r-12.0"
@@ -519,9 +519,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 180
-w 115
+w 135
 h 20
 controlPv "BL02I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -537,9 +537,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 200
-w 115
+w 135
 h 20
 controlPv "BL03I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -555,9 +555,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 220
-w 115
+w 135
 h 20
 controlPv "BL04I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -573,9 +573,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 260
-w 115
+w 135
 h 20
 controlPv "BL06I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -591,9 +591,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 520
-w 115
+w 135
 h 20
 controlPv "BL19I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -609,9 +609,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 580
-w 115
+w 135
 h 20
 controlPv "BL22I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -627,9 +627,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 620
-w 115
+w 135
 h 20
 controlPv "BL24I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -1054,9 +1054,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 280
-w 115
+w 135
 h 20
 controlPv "BL07I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -1072,9 +1072,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 360
-w 115
+w 135
 h 20
 controlPv "BL11I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -1090,9 +1090,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 440
-w 115
+w 135
 h 20
 controlPv "BL15I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -1108,9 +1108,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 460
-w 115
+w 135
 h 20
 controlPv "BL16I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -1126,9 +1126,9 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 50
+x 45
 y 500
-w 115
+w 135
 h 20
 controlPv "BL18I-GW-IOC-01:UPTIME"
 displayMode "decimal"
@@ -1144,7 +1144,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 180
 w 75
 h 15
@@ -1162,7 +1162,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 200
 w 75
 h 15
@@ -1180,7 +1180,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 220
 w 75
 h 15
@@ -1198,7 +1198,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 260
 w 75
 h 15
@@ -1216,7 +1216,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 280
 w 75
 h 15
@@ -1234,7 +1234,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 460
 w 75
 h 15
@@ -1252,7 +1252,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 360
 w 75
 h 15
@@ -1270,7 +1270,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 440
 w 75
 h 15
@@ -1288,7 +1288,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 500
 w 75
 h 15
@@ -1306,7 +1306,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 520
 w 75
 h 15
@@ -1324,7 +1324,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 580
 w 75
 h 15
@@ -1342,7 +1342,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 180
+x 185
 y 620
 w 75
 h 15
@@ -1400,7 +1400,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 175
+x 185
 y 130
 w 77
 h 16
@@ -1851,24 +1851,6 @@ value {
 }
 endObjectProperties
 
-# (Textupdate)
-object TextupdateClass
-beginObjectProperties
-major 10
-minor 0
-release 0
-x 400
-y 595
-w 110
-h 20
-controlPv "BL23B-GW-IOC-01:UPTIME"
-displayMode "decimal"
-fgColor index 14
-bgColor index 3
-fill
-font "helvetica-bold-r-14.0"
-endObjectProperties
-
 # (Related Display)
 object relatedDisplayClass
 beginObjectProperties
@@ -1954,25 +1936,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 400
-y 455
-w 110
-h 20
-controlPv "BL16B-GW-IOC-01:UPTIME"
-displayMode "decimal"
-fgColor index 14
-bgColor index 3
-fill
-font "helvetica-bold-r-14.0"
-endObjectProperties
-
-# (Textupdate)
-object TextupdateClass
-beginObjectProperties
-major 10
-minor 0
-release 0
-x 530
+x 535
 y 455
 w 75
 h 15
@@ -1990,7 +1954,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 530
+x 535
 y 595
 w 75
 h 15
@@ -2008,7 +1972,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 525
+x 535
 y 125
 w 77
 h 16
@@ -2082,5 +2046,41 @@ value {
   "Bending Magnet Beamlines"
 }
 border
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 395
+y 455
+w 130
+h 20
+controlPv "BL16B-GW-IOC-01:UPTIME"
+displayMode "decimal"
+fgColor index 14
+bgColor index 3
+fill
+font "helvetica-bold-r-14.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 395
+y 595
+w 130
+h 20
+controlPv "BL23B-GW-IOC-01:UPTIME"
+displayMode "decimal"
+fgColor index 14
+bgColor index 3
+fill
+font "helvetica-bold-r-14.0"
 endObjectProperties
 
