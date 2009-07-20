@@ -24,6 +24,7 @@ EDLS += ioc_softreset_confirm_wiener7.edl
 
 # Top level display for all BL GW IOCs
 EDLS += BLGWStatus.edl
+EDLS += ioc_embed.edl
 
 DATA += $(EDLS)
 
