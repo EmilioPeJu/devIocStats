@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<devIocStats.baseSecurity IOC="IOC"/>
+	<devIocStats.iocEnvVar IOCNAME="IOCNAME" ENVNAME="ENVNAME" ENVVAR="ENVVAR" ENVTYPE="ENVTYPE"/>
+	<devIocStats.iocCluster IOCNAME="IOCNAME" P="P" S="S" TYPE="TYPE"/>
+	<devIocStats.access DEV="DEV"/>
+	<devIocStats.ioc name="name" IOCNAME="IOCNAME"/>
+	<devIocStats.iocAdmin name="name" IOC="IOC"/>
+</components>
