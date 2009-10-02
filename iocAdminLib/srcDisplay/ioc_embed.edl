@@ -73,7 +73,7 @@ font "arial-bold-r-12.0"
 buttonLabel "Terminal"
 numCmds 1
 command {
-  0 "gnome-terminal --hide-menubar -t \"$(ioc)\" -e \"$(which BL22B-console.sh) $(ioc)\""
+  0 "gnome-terminal --hide-menubar -t \"$(ioc)\" -e \"$(which console) -g $(ioc)\""
 }
 endObjectProperties
 
