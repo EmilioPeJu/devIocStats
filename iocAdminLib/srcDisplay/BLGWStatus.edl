@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 760
-y 1646
+x 1018
+y 112
 w 712
 h 662
 font "arial-medium-r-12.0"
@@ -2082,5 +2082,71 @@ fgColor index 14
 bgColor index 3
 fill
 font "helvetica-bold-r-14.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 395
+y 495
+w 130
+h 20
+controlPv "BL18B-GW-IOC-01:UPTIME"
+displayMode "decimal"
+fgColor index 14
+bgColor index 3
+fill
+font "helvetica-bold-r-14.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 535
+y 495
+w 75
+h 15
+controlPv "BL18B-GW-IOC-01:STARTTOD"
+displayMode "decimal"
+fgColor index 14
+bgColor index 3
+fill
+font "helvetica-bold-r-14.0"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 615
+y 490
+w 75
+h 20
+fgColor index 43
+bgColor index 6
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-bold-r-14.0"
+buttonLabel "Reboot..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "ioc_stats_reboot_confirm"
+}
+setPosition {
+  0 "parentWindow"
+}
+symbols {
+  0 "ioc=BL18B-GW-IOC-01"
+}
+colorPv "BL18B-GW-IOC-01:SYSRESET.SEVR"
 endObjectProperties
 
