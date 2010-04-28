@@ -5,6 +5,7 @@ record(stringin, "$(IOCNAME):BSP_REV") {
   field(PINI, "YES")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(IOCNAME):DAT_MBUF_FREE") {
   field(DESC, "Min % Free Data MBUFs")
   field(DTYP, "IOC stats")

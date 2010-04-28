@@ -63,6 +63,7 @@ record(stringin, "$(IOCNAME):BOOTLINE6") {
   field(PINI, "YES")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(IOCNAME):SYS_MBUF_FREE") {
   field(DESC, "Min % Free Sys MBUFs")
   field(DTYP, "IOC stats")
@@ -79,6 +80,7 @@ record(ai, "$(IOCNAME):SYS_MBUF_MAX") {
   field(PINI, "YES")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(IOCNAME):IFI_ERR_CNT") {
   field(DESC, "IF Input Errors")
   field(DTYP, "IOC stats")
@@ -86,6 +88,7 @@ record(ai, "$(IOCNAME):IFI_ERR_CNT") {
   field(INP, "@inp_errs")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(IOCNAME):IFO_ERR_CNT") {
   field(DESC, "IF Output Errors")
   field(DTYP, "IOC stats")

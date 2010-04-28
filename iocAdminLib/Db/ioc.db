@@ -63,6 +63,8 @@ record(sub, "$(IOCNAME):SYSRESET")
     field(L,"1")
 }
 
+#% archiver 1 Monitor
+#% alh
 record(ai, "$(IOCNAME):CA_CLNT_CNT") {
   field(DESC, "Number of CA Clients")
   field(SCAN, "I/O Intr")
@@ -75,6 +77,8 @@ record(ai, "$(IOCNAME):CA_CLNT_CNT") {
   field(HSV, "MINOR")
 }
 
+#% archiver 1 Monitor
+#% alh
 record(ai, "$(IOCNAME):CA_CONN_CNT") {
   field(DESC, "Number of CA Connections")
   field(SCAN, "I/O Intr")
@@ -109,6 +113,8 @@ record(ai, "$(IOCNAME):FD_CNT") {
   field(INP, "@fd")
 }
 
+#% archiver 1 Monitor
+#% alh
 record(calc, "$(IOCNAME):FD_FREE") {
   field(DESC, "Available FDs")
   field(CALC, "B>0?B-A:C")
@@ -124,6 +130,8 @@ record(calc, "$(IOCNAME):FD_FREE") {
 
 # This makes the component icon reflect the severity
 # % gui, $(name), sevr
+#% archiver 1 Monitor
+#% alh
 record(ai, "$(IOCNAME):LOAD") {
   field(DESC, "CPU Load")
   field(SCAN, "I/O Intr")
@@ -138,6 +146,8 @@ record(ai, "$(IOCNAME):LOAD") {
   field(HSV, "MINOR")
 }
 
+#% archiver 1 Monitor
+#% alh
 record(ai, "$(IOCNAME):SUSP_TASK_CNT") {
   field(DESC, "Number Suspended Tasks")
   field(SCAN, "I/O Intr")
@@ -147,6 +157,7 @@ record(ai, "$(IOCNAME):SUSP_TASK_CNT") {
   field(HHSV, "MAJOR")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(IOCNAME):MEM_USED") {
   field(DESC, "Allocated Memory")
   field(SCAN, "I/O Intr")
@@ -155,6 +166,7 @@ record(ai, "$(IOCNAME):MEM_USED") {
   field(EGU, "byte")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(IOCNAME):MEM_FREE") {
   field(DESC, "Free Memory")
   field(SCAN, "I/O Intr")
