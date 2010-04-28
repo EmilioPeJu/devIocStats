@@ -17,13 +17,13 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 #If using the sequencer, uncomment this line:
 #SNCSEQ=/home/diamond/R3.14.7/prod/support/seq/2-0-10
 
-SUPPORT=/dls_sw/prod/R3.14.8.2/support
-WORK=/dls_sw/work/R3.14.8.2/support
+SUPPORT=/dls_sw/prod/R3.14.11/support
+WORK=/dls_sw/work/R3.14.11/support
 
-DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-1dls1
+DEVIOCSTATS=$(WORK)/devIocStats
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/dls_sw/epics/R3.14.8.2/base
+EPICS_BASE=/dls_sw/epics/R3.14.11/base
 
 #Capfast users may need the following definitions
 #CAPFAST_TEMPLATES=
