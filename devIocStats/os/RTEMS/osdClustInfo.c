@@ -71,7 +71,7 @@ int devIocStatsGetClusterInfo (int pool, clustInfo *pval)
 
 int devIocStatsGetClusterUsage (int pool, int *pval)
 {
-    if ( pool == SYS_POOL ) return -1;
+    if ( pool == DATA_POOL ) return -1;
 
     *pval = mbstat.m_mbufs;
 

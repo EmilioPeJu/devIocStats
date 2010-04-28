@@ -69,37 +69,12 @@
 #define STARTUP "INIT"
 #define CLUSTSIZES 2 /* only regular mbufs and clusters */
 
-/* Heap implementation changed; we should use
- * malloc_free_space() which handles these changes
- * transparently but then we don't get the
- * 'bytesUsed' information.
- */
-# if   (__RTEMS_MAJOR__ > 4) \
-   || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ > 7)
-#define RTEMS_MALLOC_IS_HEAP
-#include <rtems/score/protectedheap.h>
-typedef char objName[13];
-#define RTEMS_OBJ_GET_NAME(tc,name) rtems_object_get_name((tc)->Object.id, sizeof(name),(name))
-#ifdef SSRLAPPSMISCUTILS
-#define USE_SSRLAPPSMISCUTILS
-extern int isnan();
-#include <ssrlAppsMiscUtils.h>
-#endif
-# else
-typedef char * objName;
-#define RTEMS_OBJ_GET_NAME(tc,name) name = (tc)->Object.name
-# endif
-
 #ifdef RTEMS_BSP_PGM_EXEC_AFTER /* only defined on uC5282 */
 #define reboot(x) bsp_reset(0)
-#elif   (__RTEMS_MAJOR__ > 4) \
+#elif   (defined(__PPC__) && ((__RTEMS_MAJOR__ > 4) \
          || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ > 9) \
-         || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ == 9 && __RTEMS_REVISION__ > 0)
+         || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ == 9 && __RTEMS_REVISION__ > 0)))
 #define reboot(x) bsp_reset()
 #else
 #define reboot(x) rtemsReboot()
-#endif
-/* Use alternate to cpuBurn if SECONDS_TO_BURN is not defined */
-#ifndef  SECONDS_TO_BURN
-#define SECONDS_TO_BURN 0
 #endif

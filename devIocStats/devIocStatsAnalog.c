@@ -47,6 +47,7 @@
 
 	ai (DTYP="IOC stats"):
 		free_bytes	 - number of bytes in IOC not allocated
+		total_bytes      - number of bytes physically installed
 		allocated_bytes  - number of bytes allocated
 		max_free	 - size of largest free block
 		free_blocks	 - number of blocks in IOC not allocated

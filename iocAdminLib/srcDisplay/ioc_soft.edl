@@ -230,7 +230,7 @@ fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "Heartbeat Errors in Last 10 Sec."
+  "Heartbeat Errors in Last 20 Sec."
 }
 endObjectProperties
 
@@ -503,7 +503,7 @@ buttonLabel "More IOC Stats..."
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "ioc_stats"
+  0 "ioc_stats_soft"
 }
 setPosition {
   0 "parentWindow"

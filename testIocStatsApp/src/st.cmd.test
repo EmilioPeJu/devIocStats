@@ -3,7 +3,6 @@
 #
 epicsEnvSet("ENGINEER","<engineer>")
 epicsEnvSet("LOCATION","<location>")
-epicsEnvSet("LOGNAME","<logname>")
 # Soft IOCs only
 #epicsEnvSet("STARTUP","<startup>")
 #epicsEnvSet("ST_CMD","st.cmd")
@@ -11,8 +10,13 @@ epicsEnvSet("LOGNAME","<logname>")
 dbLoadDatabase("dbd/testIocStats.dbd",0,0)
 testIocStats_registerRecordDeviceDriver(pdbbase)
 
-## Load record instances
+## Load all record instances (VxWorks)
 dbLoadRecords("db/iocAdmin.db","IOC=IOCTEST")
+## or load only those records for RTEMS IOCs
+#dbLoadRecords("db/iocAdminRTEMS.db","IOC=IOCTEST")
+## or load only those records for Soft IOCs
+#dbLoadRecords("db/iocAdminSoft.db","IOC=IOCTEST")
+dbLoadRecords("db/testIocStatsRelease.db","IOC=IOCTEST")
 
 iocInit()
 

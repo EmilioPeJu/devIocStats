@@ -49,10 +49,17 @@
 
 # if   (__RTEMS_MAJOR__ > 4) \
    || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ > 7)
-#ifdef USE_SSRLAPPSMISCUTILS
+typedef char objName[13];
+#define RTEMS_OBJ_GET_NAME(tc,name) rtems_object_get_name((tc)->Object.id, sizeof(name),(name))
+#ifdef SSRLAPPSMISCUTILS
 static struct timespec prev_uptime   = {0};
 static struct timespec prev_idletime = {0};
+extern int isnan();
+#include <ssrlAppsMiscUtils.h>
 #endif
+# else
+typedef char * objName;
+#define RTEMS_OBJ_GET_NAME(tc,name) name = (tc)->Object.name
 # endif
 
 #ifdef RTEMS_ENABLE_NANOSECOND_CPU_USAGE_STATISTICS
@@ -109,7 +116,7 @@ static void cpu_ticks(double *total, double *idle)
 int devIocStatsInitCpuUsage (void)
 {
     cpu_ticks(&prev_total, &prev_idle);
-#ifdef USE_SSRLAPPSMISCUTILS
+#ifdef SSRLAPPSMISCUTILS
     miscu_cpu_load_percentage_init(&prev_uptime, &prev_idletime);
 #endif
     return 0;
@@ -117,7 +124,7 @@ int devIocStatsInitCpuUsage (void)
 
 extern int devIocStatsGetCpuUsage (double *pval)
 {
-#ifdef USE_SSRLAPPSMISCUTILS
+#ifdef SSRLAPPSMISCUTILS
     *pval = miscu_cpu_load_percentage(&prev_uptime, &prev_idletime);
     if (isnan(*pval)) return -1; else return 0;
 #else

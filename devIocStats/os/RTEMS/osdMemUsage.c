@@ -45,6 +45,17 @@
 
 #include <devIocStats.h>
 
+/* Heap implementation changed; we should use
+ * malloc_free_space() which handles these changes
+ * transparently but then we don't get the
+ * 'bytesUsed' information.
+ */
+# if   (__RTEMS_MAJOR__ > 4) \
+   || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ > 7)
+#define RTEMS_MALLOC_IS_HEAP
+#include <rtems/score/protectedheap.h>
+# endif
+
 int devIocStatsInitMemUsage (void) { return 0; }
 
 int devIocStatsGetMemUsage (memInfo *pval)

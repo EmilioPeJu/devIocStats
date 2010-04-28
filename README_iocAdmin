@@ -1,4 +1,4 @@
-Instructions for iocAdmin users                    Last Updated 02/09/2009
+Instructions for iocAdmin users                    Last Updated 07/14/2009
 --------------------------------
 
 The iocAdmin package contains databases and libraries to add ioc administration
@@ -19,22 +19,33 @@ I - Adding the iocAdmin package to your IOC application:
 
 (1) Add IOCADMIN to configure/RELEASE and clean/rebuild configure:
 
-IOCADMIN=/afs/slac/g/lcls/epics/modules/iocAdmin/iocAdmin-R<release>
+IOCADMIN=/afs/slac/g/lcls/build/epics/modules/iocAdmin/iocAdmin-R<release>
 
-(2) Link the iocAdmin libraries into your app by adding to xxxApp/src/Makefile:
+(2) Link the iocAdmin libraries into your app by adding to 
+    <xxx>App/src/Makefile:
 
-   xxx_LIBS += devIocStats
+   <xxx>_LIBS += devIocStats
 
-(3) Add the following .dbd files to xxxApp/src/Makefile 
-    or to xxxApp/src/xxxInclude.dbd:
+(3) Add the following .dbd files to <xxx>App/src/Makefile 
+    or to <xxx>App/src/<xxx>Include.dbd:
 
-   xxx_DBD += iocAdmin.dbd
+   <xxx>_DBD += iocAdmin.dbd
 
-(4) Install the iocAdmin database by adding to xxxApp/Db/Makefile:
+(4) Install the iocAdmin database and create iocRelease.db by adding to 
+    <xxx>App/Db/Makefile:
 
-   DB_INSTALLS += $(IOCADMIN)/db/iocAdmin.db
+   DB_INSTALLS += $(IOCADMIN)/db/iocAdmin.db      (VxWorks IOCs)
+   DB_INSTALLS += $(IOCADMIN)/db/iocAdminRTEMS.db (RTEMS   IOCs)
+   DB_INSTALLS += $(IOCADMIN)/db/iocAdminSoft.db  (soft    IOCs)
    DB_INSTALLS += $(IOCADMIN)/db/access.db        (if required by next step)
    DB_INSTALLS += $(IOCADMIN)/db/baseSecurity.acf
+   IOCRELEASE_DB += iocRelease.db
+
+    NOTE: The iocRelease database assumes that each 
+    module used by the application has a line in configure/RELEASE as follows:
+	<module>_MODULE_VERION =  <module>-<version>
+    It also assumes that modules are not specified in any file included
+    by configure/RELEASE.
 
 (5) For each device, or device attribute, used by higher-level software 
     (ie, feedback), an ACCESS mode and FBCK state soft mbbo records are
@@ -89,9 +100,18 @@ II - Adding iocAdmin to your IOC startup file:
 
 (2) Add iocAdmin database to st.cmd (before iocInit):
 
+    VxWorks IOCs only:
     dbLoadRecords("db/iocAdmin.db", "IOC=<iocname>")
+    RTEMS IOCs only:
+    dbLoadRecords("db/iocAdminRTEMS.db", "IOC=<iocname>")
+    Soft IOCs only:
+    dbLoadRecords("db/iocAdminSoft.db", "IOC=<iocname>")
 
-(3) If baseSecurity.acf is not included in the ioc application's own
+(3) Add iocRelease database to st.cmd (before iocInit):
+
+    dbLoadRecords("db/iocRelease.db", "IOC=<iocname>")
+
+(4) If baseSecurity.acf is not included in the ioc application's own
     acf file, add these lines (before iocInit):
 
     asSetFilename("<path>/db/baseSecurity.acf")
@@ -109,7 +129,11 @@ III - Adding iocAdmin to CA Clients:
          should also be added.  Use this template to create the 
 	 <ioc>.cwConfig file:
 
+	RTEMS and VxWorks IOCs only:
 	$(IOCADMIN)/restore/iocAdmin.cwConfig
+
+	Soft IOCs only:
+	$(IOCADMIN)/restore/iocAdminSoft.cwConfig
 
     (1b) Device-Specific Records - For every device instantiating the 
          access.db database, add these lines to the channel watcher 
@@ -128,6 +152,8 @@ III - Adding iocAdmin to CA Clients:
 	ioc_rtems_crat - RTEMS IOC using the crate interface to power cycle.
 	ioc_rtems_none - RTEMS IOC without a crate interface or AC switch.
 	ioc_rtems_nosupport - RTEMS IOC with a unsupported crate interface
+	ioc_soft       - Soft IOC
+	Set the "ioc" macro to the ioc database name.
 
     (2b) Device-Specific Display - For each device instantiating the access.db
 	 database, add choice or menu buttons for ACCESS and FBCK on the 
@@ -140,9 +166,9 @@ III - Adding iocAdmin to CA Clients:
 	All IOCs:
 	<iocname>:CA_CLNT_CNT
 	<iocname>:CA_CONN_CNT
-
-	RTEMS IOCs only:
 	<iocname>:FD_FREE
+
+	RTEMS and VxWorks IOCs only:
 	<iocname>:MEM_FREE
 	<iocname>:MEM_BLK_FREE
 	<iocname>:SYS_MBUF_FREE
@@ -158,11 +184,14 @@ III - Adding iocAdmin to CA Clients:
     the following PVs and include them in <iocname>:STATSUMY on the ALH soft 
     IOC:
 
+	All IOCs:
 	<iocname>:CA_CLNT_CNT
 	<iocname>:CA_CONN_CNT
 	<iocname>:SUSP_TASK_CNT
 	<iocname>:FD_FREE
+	<iocname>:HEARTBEATSUM (from the ALH soft IOC)
+
+	RTEMS and VxWorks IOCs only:
 	<iocname>:LOAD
 	<iocname>:MEM_BLK_FREE
-	<iocname>:HEARTBEATSUM (from the ALH soft IOC)
 

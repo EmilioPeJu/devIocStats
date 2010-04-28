@@ -50,7 +50,8 @@ int devIocStatsGetStartupScript (char **pval)
         if (script) scriptlen = len; else scriptlen = 0;
     }
     strcpy(script, sp);
-    if (sp == notavail) script[plen] = '\0'; else script[plen] = '/';
+    if (sp == notavail) script[plen] = '\0';
+    else if (strlen(st) > 0) script[plen] = '/';
     strcpy(script+plen+1, st);
     *pval = script;
     if (sp == notavail) return -1;
