@@ -1,3 +1,6 @@
+# % macro, IOCNAME, IOC name
+# % macro, DAT_MBUF_FLNK, Forward link from DAT_MBUF_FREE
+
 record(stringin, "$(IOCNAME):BSP_REV") {
   field(DESC, "BSP Revision")
   field(DTYP, "IOC stats")

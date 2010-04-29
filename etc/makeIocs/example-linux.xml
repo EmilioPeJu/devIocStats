@@ -1,4 +1,4 @@
 <?xml version="1.0" ?>
-<components arch="vxWorks-ppc604_long">
+<components arch="linux-x86">
 	<devIocStats.defaultIocStats ioc_name="TEST-IOC"/>
 </components>

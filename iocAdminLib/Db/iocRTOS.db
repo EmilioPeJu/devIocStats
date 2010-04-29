@@ -1,3 +1,6 @@
+# % macro, IOCNAME, IOC name
+# % macro, SYS_MBUF_FLNK, Forward link from SYS_MBUF_FREE
+
 record(ai, "$(IOCNAME):MEM_BLK") {
   field(DESC, "Maximum Free Memory Block")
   field(SCAN, "I/O Intr")

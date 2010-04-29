@@ -1,3 +1,8 @@
+# % macro, IOCNAME, IOC name
+# % macro, ENVVAR, Name of variable to monitor
+# % macro, ENVNAME, 
+# % macro, ENVTYPE, 
+
 record(stringin, "$(IOCNAME):$(ENVNAME)") {
   field(DESC, "$(ENVVAR)")
   field(DTYP, "IOC $(ENVTYPE) var")
