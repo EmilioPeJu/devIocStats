@@ -2023,7 +2023,7 @@ bgColor index 0
 useDisplayBg
 value {
   "IOCs handling Beamline Control of Front End components"
-  "For I06 this also includes ID control"
+  "For BL06I & BL10I this also includes ID control"
 }
 autoSize
 endObjectProperties
