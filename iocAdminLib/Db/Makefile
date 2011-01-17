@@ -12,6 +12,7 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 #
 DB += ioc.db
+DB += ioc_vxworks.db
 DB += iocRTOS.db
 DB += iocVxWorksOnly.db
 DB += iocEnvVar.db

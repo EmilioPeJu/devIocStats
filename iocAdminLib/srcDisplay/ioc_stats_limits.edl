@@ -40,11 +40,11 @@ fill
 fillColor index 3
 endObjectProperties
 
-# (Text)
+# (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 210
 y 75
@@ -62,13 +62,14 @@ nullColor index 1
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
-# (Text)
+# (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 280
 y 75
@@ -86,6 +87,7 @@ nullColor index 1
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Static Text)
@@ -128,11 +130,11 @@ value {
 autoSize
 endObjectProperties
 
-# (Text)
+# (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 210
 y 105
@@ -150,13 +152,14 @@ nullColor index 1
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
-# (Text)
+# (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 280
 y 105
@@ -174,13 +177,14 @@ nullColor index 1
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
-# (Text)
+# (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 280
 y 135
@@ -198,13 +202,14 @@ nullColor index 1
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
-# (Text)
+# (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 210
 y 175
@@ -222,13 +227,14 @@ nullColor index 1
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
-# (Text)
+# (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 280
 y 175
@@ -246,13 +252,14 @@ nullColor index 1
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
-# (Text)
+# (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 210
 y 230
@@ -270,13 +277,14 @@ nullColor index 1
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
-# (Text)
+# (Text Control)
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 280
 y 230
@@ -294,6 +302,7 @@ nullColor index 1
 useHexPrefix
 newPos
 objType "controls"
+noExecuteClipMask
 endObjectProperties
 
 # (Rectangle)
@@ -349,35 +358,6 @@ botShadowColor index 11
 label "Exit"
 font "helvetica-medium-r-12.0"
 3d
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 210
-y 10
-w 95
-h 25
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-buttonLabel "Home Screen..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "lcls_main"
-}
-setPosition {
-  0 "parentWindow"
-}
-replaceSymbols {
-  0 1
-}
 endObjectProperties
 
 # (Static Text)

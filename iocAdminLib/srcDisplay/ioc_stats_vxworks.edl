@@ -238,35 +238,6 @@ value {
 autoSize
 endObjectProperties
 
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 375
-y 10
-w 95
-h 25
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-buttonLabel "Home Screen..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "lcls_main"
-}
-setPosition {
-  0 "parentWindow"
-}
-replaceSymbols {
-  0 1
-}
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -1316,38 +1287,6 @@ value {
 autoSize
 endObjectProperties
 
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 75
-y 770
-w 95
-h 20
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-buttonLabel "Cluster Info"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "ioc_stats_clust"
-}
-menuLabel {
-  0 "$(ioc) System Cluster Info"
-}
-setPosition {
-  0 "parentWindow"
-}
-symbols {
-  0 "pool=SYS,name=System,idx=1"
-}
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -1798,38 +1737,6 @@ value {
 autoSize
 endObjectProperties
 
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 180
-y 770
-w 95
-h 20
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-buttonLabel "Cluster Info"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "ioc_stats_clust"
-}
-menuLabel {
-  0 "$(ioc) Data Cluster Info"
-}
-setPosition {
-  0 "parentWindow"
-}
-symbols {
-  0 "pool=DAT,name=Data,idx=0"
-}
-endObjectProperties
-
 # (Textupdate)
 object TextupdateClass
 beginObjectProperties
@@ -1970,41 +1877,6 @@ displayFileName {
 }
 setPosition {
   0 "parentWindow"
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 365
-y 220
-w 125
-h 25
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-buttonLabel "Release Versions,,,"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "ioc_stats_release"
-}
-setPosition {
-  0 "parentWindow"
-}
-symbols {
-  0 "ioc=$(ioc),idx=0,p=1"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
 }
 endObjectProperties
 

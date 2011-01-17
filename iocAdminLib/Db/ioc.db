@@ -287,3 +287,78 @@ record(stringin, "$(IOCNAME):UPTIME") {
   field(INP, "@up_time")
   field(PINI, "YES")
 }
+
+
+
+#substitute "IOCNAME=$(IOCNAME)"
+
+substitute "ENVNAME=LOCATION"
+substitute "ENVVAR=LOCATION"
+substitute "ENVTYPE=env"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=ENGINEER"
+substitute "ENVVAR=ENGINEER"
+substitute "ENVTYPE=env"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=CA_ADDR_LIST"
+substitute "ENVVAR=EPICS_CA_ADDR_LIST"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=CA_CONN_TIME"
+substitute "ENVVAR=EPICS_CA_CONN_TMO"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=CA_AUTO_ADDR"
+substitute "ENVVAR=EPICS_CA_AUTO_ADDR_LIST"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=CA_RPTR_PORT"
+substitute "ENVVAR=EPICS_CA_REPEATER_PORT"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=CA_SRVR_PORT"
+substitute "ENVVAR=EPICS_CA_SERVER_PORT"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=CA_MAX_ARRAY"
+substitute "ENVVAR=EPICS_CA_MAX_ARRAY_BYTES"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=CA_SRCH_TIME"
+substitute "ENVVAR=EPICS_CA_MAX_SEARCH_PERIOD"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=CA_BEAC_TIME"
+substitute "ENVVAR=EPICS_CA_BEACON_PERIOD"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=TIMEZONE"
+substitute "ENVVAR=EPICS_TIMEZONE"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=TS_NTP_INET"
+substitute "ENVVAR=EPICS_TS_NTP_INET"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=IOC_LOG_PORT"
+substitute "ENVVAR=EPICS_IOC_LOG_PORT"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
+substitute "ENVNAME=IOC_LOG_INET"
+substitute "ENVVAR=EPICS_IOC_LOG_INET"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.db"
+
