@@ -10,10 +10,8 @@ class ioc(AutoSubstitution):
     Dependencies = (_devIocStats,)
     TemplateFile = 'ioc.db'
 
-class ioc_vxworks(AutoSubstitution):
-    Dependencies = (_devIocStats,)
+class ioc_vxworks(ioc):
     TemplateFile = 'ioc_vxworks.db'
-
 
 ## Create default Device IOC Stats definitions.
 class defaultIocStats(ModuleBase):

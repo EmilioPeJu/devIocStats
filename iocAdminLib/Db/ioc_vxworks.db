@@ -1,13 +1,3 @@
-#% macro, __doc__, Create some records for reading IOC statistics and details.
-# VxWorks support
-#% macro, name, Object name and GUI association name
-#% macro, IOCNAME, Device prefix
-
-# % gui, $(name), edm, ioc_stats.edl, ioc=$(IOCNAME)
-# % gui, $(name), edmembed, ioc_embed.edl, ioc=$(IOCNAME)
-
-#Only need to substitute the IOCNAME macro
-
 include "ioc.db"
 
 substitute "SYS_MBUF_FLNK="
