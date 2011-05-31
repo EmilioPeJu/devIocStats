@@ -3,8 +3,11 @@ include $(TOP)/configure/CONFIG
 
 DIRS += configure
 DIRS += devIocStats
-DIRS += iocAdminLib
+DIRS += iocAdmin
 #DIRS += testIocStatsApp
+#DIRS += iocBoot
+# For LCLS
+#DIRS += testIocAdminApp
 
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard etc))
 # Comment out the following line to disable building of example iocs

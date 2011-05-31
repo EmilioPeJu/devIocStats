@@ -1,7 +1,0 @@
-include "ioc.db"
-
-substitute "SYS_MBUF_FLNK="
-include "iocRTOS.db"
-
-substitute "DAT_MBUF_FLNK="
-include "iocVxWorksOnly.db"
