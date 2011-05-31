@@ -14,6 +14,12 @@ EDLS += ioc_stats_soft.edl
 EDLS += ioc_stats_vxworks.edl
 EDLS += ioc_stats_scanmon.edl
 
+# Top level display for all BL GW IOCs
+EDLS += BLGWStatus.edl
+EDLS += ioc_embed.edl
+
+DATA += $(EDLS)
+
 include $(TOP)/configure/RULES
 #----------------------------------------
 #  ADD RULES AFTER THIS LINE

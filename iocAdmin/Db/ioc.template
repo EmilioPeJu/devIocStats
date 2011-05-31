@@ -1,3 +1,11 @@
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+# Linux and VxWorks support
+#% macro, name, Object name and GUI association name
+#% macro, IOCNAME, Device prefix
+
+# % gui, $(name), edm, ioc_stats.edl, ioc=$(IOCNAME)
+# % gui, $(name), edmembed, ioc_embed.edl, ioc=$(IOCNAME)
+
 # Used by Channel Access Security to determine access to this IOC.
 record(mbbo, "$(IOCNAME):ACCESS")
 {
@@ -19,14 +27,14 @@ record(stringin, "$(IOCNAME):STARTTOD")
     field(DESC, "Time and date of startup")
     field(DTYP, "Soft Timestamp")
     field(PINI, "YES")
-    field(INP, "@%m/%d/%Y %H:%M:%S")
+    field(INP, "@%Y/%m/%d %H:%M:%S")
 }
 record(stringin, "$(IOCNAME):TOD")
 {
     field(DESC, "Current time and date")
     field(DTYP, "Soft Timestamp")
     field(SCAN, "1 second")
-    field(INP, "@%m/%d/%Y %H:%M:%S")
+    field(INP, "@%Y/%m/%d %H:%M:%S")
 }
 record(calcout, "$(IOCNAME):HEARTBEAT")
 {
@@ -56,6 +64,8 @@ record(sub, "$(IOCNAME):SYSRESET")
     field(L,"1")
 }
 
+#% archiver 1 Monitor
+#% alh
 record(ai, "$(IOCNAME):CA_CLNT_CNT") {
   field(DESC, "Number of CA Clients")
   field(SCAN, "I/O Intr")
@@ -69,6 +79,8 @@ record(ai, "$(IOCNAME):CA_CLNT_CNT") {
   info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
 }
 
+#% archiver 1 Monitor
+#% alh
 record(ai, "$(IOCNAME):CA_CONN_CNT") {
   field(DESC, "Number of CA Connections")
   field(SCAN, "I/O Intr")
@@ -104,6 +116,8 @@ record(ai, "$(IOCNAME):FD_CNT") {
   field(INP, "@fd")
 }
 
+#% archiver 1 Monitor
+#% alh
 record(calc, "$(IOCNAME):FD_FREE") {
   field(DESC, "Available FDs")
   field(CALC, "B>0?B-A:C")
@@ -133,6 +147,8 @@ record(ai, "$(IOCNAME):SYS_CPU_LOAD") {
   info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
 }
 
+#% archiver 1 Monitor
+#% alh
 record(ai, "$(IOCNAME):IOC_CPU_LOAD") {
   alias("$(IOCNAME):LOAD")
   field(DESC, "IOC CPU Load")
@@ -156,6 +172,8 @@ record(ai, "$(IOCNAME):CPU_CNT") {
   field(PINI, "YES")
 }
 
+#% archiver 1 Monitor
+#% alh
 record(ai, "$(IOCNAME):SUSP_TASK_CNT") {
   field(DESC, "Number Suspended Tasks")
   field(SCAN, "I/O Intr")
@@ -166,6 +184,7 @@ record(ai, "$(IOCNAME):SUSP_TASK_CNT") {
   info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(IOCNAME):MEM_USED") {
   field(DESC, "Allocated Memory")
   field(SCAN, "I/O Intr")
@@ -174,6 +193,7 @@ record(ai, "$(IOCNAME):MEM_USED") {
   field(EGU, "byte")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(IOCNAME):MEM_FREE") {
   field(DESC, "Free Memory")
   field(SCAN, "I/O Intr")
@@ -295,3 +315,132 @@ record(stringin, "$(IOCNAME):UPTIME") {
   field(INP, "@up_time")
   field(PINI, "YES")
 }
+
+
+substitute "ENVNAME=LOCATION"
+substitute "ENVVAR=LOCATION"
+substitute "ENVTYPE=env"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=ENGINEER"
+substitute "ENVVAR=ENGINEER"
+substitute "ENVTYPE=env"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=CA_ADDR_LIST"
+substitute "ENVVAR=EPICS_CA_ADDR_LIST"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=CA_CONN_TIME"
+substitute "ENVVAR=EPICS_CA_CONN_TMO"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=CA_AUTO_ADDR"
+substitute "ENVVAR=EPICS_CA_AUTO_ADDR_LIST"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=CA_RPTR_PORT"
+substitute "ENVVAR=EPICS_CA_REPEATER_PORT"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=CA_SRVR_PORT"
+substitute "ENVVAR=EPICS_CA_SERVER_PORT"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=CA_MAX_ARRAY"
+substitute "ENVVAR=EPICS_CA_MAX_ARRAY_BYTES"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=CA_SRCH_TIME"
+substitute "ENVVAR=EPICS_CA_MAX_SEARCH_PERIOD"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=CA_BEAC_TIME"
+substitute "ENVVAR=EPICS_CA_BEACON_PERIOD"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=TIMEZONE"
+substitute "ENVVAR=EPICS_TIMEZONE"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=TS_NTP_INET"
+substitute "ENVVAR=EPICS_TS_NTP_INET"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=IOC_LOG_PORT"
+substitute "ENVVAR=EPICS_IOC_LOG_PORT"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "ENVNAME=IOC_LOG_INET"
+substitute "ENVVAR=EPICS_IOC_LOG_INET"
+substitute "ENVTYPE=epics"
+include "iocEnvVar.template"
+
+substitute "SCANNAME=01HZ"
+substitute "SCAN=10 second"
+substitute "MODE=1"
+substitute "MINOR_TOL=1.0"
+substitute "MAJOR_TOL=5.0"
+include "iocScanMon.template"
+
+substitute "SCANNAME=02HZ"
+substitute "SCAN=5 second"
+substitute "MODE=1"
+substitute "MINOR_TOL=1.0"
+substitute "MAJOR_TOL=5.0"
+include "iocScanMon.template"
+
+substitute "SCANNAME=05HZ"
+substitute "SCAN=2 second"
+substitute "MODE=1"
+substitute "MINOR_TOL=1.0"
+substitute "MAJOR_TOL=5.0"
+include "iocScanMon.template"
+
+substitute "SCANNAME=1HZ"
+substitute "SCAN=1 second"
+substitute "MODE=1"
+substitute "MINOR_TOL=1.0"
+substitute "MAJOR_TOL=5.0"
+include "iocScanMon.template"
+
+substitute "SCANNAME=2HZ"
+substitute "SCAN=.5 second"
+substitute "MODE=1"
+substitute "MINOR_TOL=1.0"
+substitute "MAJOR_TOL=5.0"
+include "iocScanMon.template"
+
+substitute "SCANNAME=5HZ"
+substitute "SCAN=.2 second"
+substitute "MODE=1"
+substitute "MINOR_TOL=1.0"
+substitute "MAJOR_TOL=5.0"
+include "iocScanMon.template"
+
+substitute "SCANNAME=10HZ"
+substitute "SCAN=.1 second"
+substitute "MODE=1"
+substitute "MINOR_TOL=1.0"
+substitute "MAJOR_TOL=5.0"
+include "iocScanMon.template"
+
+substitute "SCANNAME0=01HZ"
+substitute "SCANNAME1=02HZ"
+substitute "SCANNAME2=05HZ"
+substitute "SCANNAME3=1HZ"
+substitute "SCANNAME4=2HZ"
+substitute "SCANNAME5=5HZ"
+substitute "SCANNAME6=10HZ"
+include "iocScanMonSum.template"
