@@ -65,7 +65,7 @@ typedef struct cpuUsageInfo cpuUsageInfo;
 
 static cpuUsageInfo cpuUsage = {0};
 
-#if 0
+/*#if 0*/
 /* This is not going to burn anything with a modern gcc
  * (which pre-computes the result AND knows that
  * sqrt has no side-effects). Unless we use the result
@@ -80,21 +80,21 @@ static double cpuBurn()
 	 for(i=0;i<5; i++) result += sqrt((double)i);
 	 return(result);
 }
-#else
+/*#else
 static double cpuBurn(void)
 {
     epicsTimeStamp then, now;
     double         diff;
-
+*/
     /* poll the clock for 500us */
-    epicsTimeGetCurrent(&then);
+    /*    epicsTimeGetCurrent(&then);
     do {
         epicsTimeGetCurrent(&now);
         diff = epicsTimeDiffInSeconds(&now,&then);
     } while ( diff < 0.0005 );
     return diff;
 }
-#endif
+#endif*/
 
 static void cpuUsageTask(void *parm)
 {
