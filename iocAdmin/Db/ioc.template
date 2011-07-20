@@ -162,6 +162,7 @@ record(ai, "$(IOCNAME):IOC_CPU_LOAD") {
   field(HIGH, "70")
   field(HHSV, "MAJOR")
   field(HSV, "MINOR")
+  field(ADEL,"0.5")
   info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
 }
 
