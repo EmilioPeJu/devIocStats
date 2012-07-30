@@ -8,8 +8,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 366
-y 279
+x 368
+y 305
 w 180
 h 20
 font "arial-medium-r-14.0"
@@ -48,7 +48,7 @@ buttonLabel "$(label)"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "ioc_stats"
+  0 "$(EDM_FILE)"
 }
 symbols {
   0 "ioc=$(ioc)"

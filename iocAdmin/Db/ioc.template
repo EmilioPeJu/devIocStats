@@ -3,8 +3,8 @@
 #% macro, name, Object name and GUI association name
 #% macro, IOCNAME, Device prefix
 
-# % gui, $(name), edm, ioc_stats.edl, ioc=$(IOCNAME)
-# % gui, $(name), edmembed, ioc_embed.edl, ioc=$(IOCNAME)
+# % gui, $(name), edm, $(EDM_FILE=ioc_stats_soft.edl), ioc=$(IOCNAME)
+# % gui, $(name), edmembed, ioc_embed.edl, ioc=$(IOCNAME),EDM_FILE=$(EDM_FILE=ioc_stats_soft.edl)
 
 # Used by Channel Access Security to determine access to this IOC.
 record(mbbo, "$(IOCNAME):ACCESS")

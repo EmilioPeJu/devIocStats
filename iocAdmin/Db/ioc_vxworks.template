@@ -1,3 +1,4 @@
+substitute "EDM_FILE=ioc_stats_vxworks.edl"
 include "ioc.template"
 
 include "iocGeneralTime.template"
