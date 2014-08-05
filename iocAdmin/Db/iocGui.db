@@ -1,0 +1,4 @@
+# % gui, $(name), edm, $(EDM_FILE=ioc_stats_softdls.edl), ioc=$(IOCNAME)
+# % gui, $(name), edmembed, ioc_embed.edl, ioc=$(IOCNAME),EDM_FILE=$(EDM_FILE=ioc_stats_softdls.edl)
+
+

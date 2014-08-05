@@ -3,8 +3,7 @@
 #% macro, name, Object name and GUI association name
 #% macro, IOCNAME, Device prefix
 
-# % gui, $(name=None), edm, $(EDM_FILE=ioc_stats_soft.edl), ioc=$(IOCNAME)
-# % gui, $(name=None), edmembed, ioc_embed.edl, ioc=$(IOCNAME),EDM_FILE=$(EDM_FILE=ioc_stats_soft.edl)
+include "iocGui.db"
 
 # Used by Channel Access Security to determine access to this IOC.
 record(mbbo, "$(IOCNAME):ACCESS")
@@ -306,6 +305,13 @@ record(stringin, "$(IOCNAME):APP_DIR2") {
   field(DESC, "Application Directory Part 2")
   field(DTYP, "IOC stats")
   field(INP, "@pwd2")
+  field(PINI, "YES")
+}
+
+record(stringin, "$(IOCNAME):DLSVER") {
+  field(DESC, "Application Directory Part 2")
+  field(DTYP, "IOC stats")
+  field(INP, "@dlsver")
   field(PINI, "YES")
 }
 

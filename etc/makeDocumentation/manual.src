@@ -6,7 +6,7 @@
 devIocStats is a cross platform IOC statistics module. On VxWorks it replaces the vxStats support module.\n 
  
 It is developed and maintained at SLAC:\n
-<a href="http://www.slac.stanford.edu/grp/cd/soft/epics/site/devIocStats/">Link to devIocStats at SLAC</a>. \endlink \n
+<a href="http://www.slac.stanford.edu/grp/cd/soft/epics/site/devIocStats/">Link to devIocStats at SLAC</a>.  \n
 
 <h3>Installing devIocStats on a linux IOC</h3>
 

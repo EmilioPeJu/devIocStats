@@ -153,6 +153,7 @@ static void statsUpTime(char *);
 static void statsHostName(char *);
 static void statsPwd1(char *);
 static void statsPwd2(char *);
+static void statsDlsver(char *);
 
 static validGetStrParms statsGetStrParms[]={
 	{ "startup_script_1",		statsSScript1,		STATIC_TYPE },
@@ -172,6 +173,7 @@ static validGetStrParms statsGetStrParms[]={
         { "hostname",			statsHostName,		STATIC_TYPE },
         { "pwd1",			statsPwd1,		STATIC_TYPE },
         { "pwd2",			statsPwd2,		STATIC_TYPE },
+    { "dlsver",             statsDlsver,    STATIC_TYPE },
 	{ NULL,NULL,0 }
 };
 
@@ -344,6 +346,42 @@ static void statsKernelVer(char *d) { getStringPart(d,               0, devIocSt
 
 static void statsPwd1(char *d)      { getStringPart(d,               0, devIocStatsGetPwd); }
 static void statsPwd2(char *d)      { getStringPart(d,   MAX_NAME_SIZE, devIocStatsGetPwd); }
+
+
+/* parse a string like 
+/dls_sw/prod/R3.14.12.3/ioc/BL23I/BL23I-CS-IOC-02/2-15
+to extract 2-15 
+ */
+static void statsDlsver(char *d)
+{ 
+    char * pwd;
+    char * last_slash;
+    int r = devIocStatsGetPwd(&pwd);
+    char version[MAX_STRING_SIZE];
+    
+    if (r == 0)
+    {
+        /* What have we got */
+        last_slash = strrchr(pwd, '/');
+        if(strstr(pwd, "prod") != NULL && (last_slash != NULL))
+        {
+            strcpy(version, last_slash+1);
+        }
+        else if(strstr(pwd, "work"))
+        {
+            strcpy(version, "work");
+        }
+        else
+        {
+            strcpy(version, "other");
+        }
+    }
+    else {
+        strcpy(version, "not available");
+    }
+    strncpy(d, version, MAX_NAME_SIZE);
+    d[MAX_NAME_SIZE] = 0;
+}
 
 static void statsHostName (char *d) { getStringPart(d,               0, devIocStatsGetHostname); }
 
