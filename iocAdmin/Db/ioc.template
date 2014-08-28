@@ -131,6 +131,7 @@ record(calc, "$(IOCNAME):FD_FREE") {
   info(autosaveFields_pass0, "HOPR LOPR LOW LOLO LSV LLSV")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(IOCNAME):SYS_CPU_LOAD") {
   field(DESC, "System CPU Load")
   field(SCAN, "I/O Intr")
