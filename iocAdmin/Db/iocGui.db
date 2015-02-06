@@ -4,31 +4,32 @@
 
 
 # This associates BOY screens with the template
-# % gui, $(name), boydetail, devIocStatsApp_opi/ioc_detail.opi, ioc=$(IOCNAME)
-### % gui, $(name), boyembed, devIocStatsApp_opi/ioc_embed.opi, ioc=$(IOCNAME)
+# % gui, $(name), boydetail, devIocStatsApp_opi/ioc_detail.opi, desc=$(IOCNAME), IOCNAME=$(IOCNAME), name=$(name)
+# % gui, $(name), boyembed, devIocStatsApp_opi/ioc_embed.opi, desc=$(IOCNAME),  IOCNAME=$(IOCNAME), name=$(name)
+# % gui, $(name), boyembed, devIocStatsApp_opi/ioc_embed_box.opi, desc=$(IOCNAME),  IOCNAME=$(IOCNAME), name=$(name)
 
 # These define what PVs a detail screen should contain
-# % gui, $(name), readback, Startup Time,  low, $(IOCNAME):STARTOD
-# % gui, $(name), readback, Current Time,  low, $(IOCNAME):TOD
-# % gui, $(name), readback, Up Time,  low, $(IOCNAME):UPTIME
-# % gui, $(name), readback, Heartbeat,  low, $(IOCNAME):HEARTBEAT
-# % gui, $(name), readback, Records,  low, $(IOCNAME):RECORD_CNT
-# % gui, $(name), readback, Host Name,  low, $(IOCNAME):HOSTNAME
-# % gui, $(name), readback, User Name,  low, $(IOCNAME):ENGINEER
-# % gui, $(name), readback, Location,  low, $(IOCNAME):LOCATION
-# % gui, $(name), readback, CA Clients,  low, $(IOCNAME):CA_CLNT_CNT
-# % gui, $(name), readback, CA PV Conns,  low, $(IOCNAME):CA_CONN_CNT
-# % gui, $(name), readback, Susp Tasks,  low, $(IOCNAME):SUSP_TASK_CNT
-# % gui, $(name), readback, EPICS Version,  low, $(IOCNAME):EPICS_VERS
-# % gui, $(name), readback, OS Version,  low, $(IOCNAME):KERNEL_VERS
-# % gui, $(name), readback, Application Directory,  low, $(IOCNAME):APP_DIR1
-# % gui, $(name), readback, Startup Script,  low, $(IOCNAME):ST_SCRIPT1
-# % gui, $(name), readback, Memory Free,  low, $(IOCNAME):MEM_FREE
-# % gui, $(name), readback, Memory Used,  low, $(IOCNAME):MEM_USED
-# % gui, $(name), readback, Memory Max,  low, $(IOCNAME):MEM_MAX
-# % gui, $(name), readback, File Handles Free,  low, $(IOCNAME):FD_FREE
-# % gui, $(name), readback, File Handles Max,  low, $(IOCNAME):FD_MAX
-# % gui, $(name), readback, IOC CPU Load,  low, $(IOCNAME):IOC_CPU_LOAD
-# % gui, $(name), readback, All CPUs Load,  low, $(IOCNAME):SYS_CPU_LOAD
-# % gui, $(name), readback, System CPUs,  low, $(IOCNAME):CPU_CNT
+# % gui, $(name), readback, Startup Time,$(IOCNAME):STARTOD
+# % gui, $(name), readback, Current Time,$(IOCNAME):TOD
+# % gui, $(name), readback, Up Time,$(IOCNAME):UPTIME
+# % gui, $(name), readback, Heartbeat,$(IOCNAME):HEARTBEAT
+# % gui, $(name), readback, Records,$(IOCNAME):RECORD_CNT
+# % gui, $(name), readback, Host Name,$(IOCNAME):HOSTNAME
+# % gui, $(name), readback, User Name,$(IOCNAME):ENGINEER
+# % gui, $(name), readback, Location,$(IOCNAME):LOCATION
+# % gui, $(name), readback, CA Clients,$(IOCNAME):CA_CLNT_CNT
+# % gui, $(name), readback, CA PV Conns,$(IOCNAME):CA_CONN_CNT
+# % gui, $(name), readback, Susp Tasks,$(IOCNAME):SUSP_TASK_CNT
+# % gui, $(name), readback, EPICS Version,$(IOCNAME):EPICS_VERS
+# % gui, $(name), readback, OS Version,$(IOCNAME):KERNEL_VERS
+# % gui, $(name), readback, Application Directory,$(IOCNAME):APP_DIR1
+# % gui, $(name), readback, Startup Script,$(IOCNAME):ST_SCRIPT1
+# % gui, $(name), readback, Memory Free,$(IOCNAME):MEM_FREE
+# % gui, $(name), readback, Memory Used,$(IOCNAME):MEM_USED
+# % gui, $(name), readback, Memory Max,$(IOCNAME):MEM_MAX
+# % gui, $(name), readback, File Handles Free,$(IOCNAME):FD_FREE
+# % gui, $(name), readback, File Handles Max,$(IOCNAME):FD_MAX
+# % gui, $(name), readback, IOC CPU Load,$(IOCNAME):IOC_CPU_LOAD
+# % gui, $(name), readback, All CPUs Load,$(IOCNAME):SYS_CPU_LOAD
+# % gui, $(name), readback, System CPUs,$(IOCNAME):CPU_CNT
 
