@@ -5,28 +5,29 @@ include $(TOP)/configure/CONFIG
 
 #----------------------------------------------------
 #  Optimization of db files using dbst (DEFAULT: NO)
-#DB_OPT = YES
+#DB_INSTALLS_OPT = YES
 
 #----------------------------------------------------
 # Create and install (or just install)
 # databases, templates, substitutions like this
 #
-DB += ioc.db
-DB += ioc_vxworks.db
-DB += iocRTOS.db
-DB += iocVxWorksOnly.db
-DB += iocRTEMSOnly.db
-DB += iocEnvVar.db
-DB += iocCluster.db
-DB += iocScanMon.db
-DB += iocScanMonSum.db
-DB += iocGeneralTime.db
-DB += access.db
-DB += iocAdminVxWorks.db
-DB += iocAdminSoft.db
-DB += iocAdminRTEMS.db
-DB += iocAdminScanMon.db
-DB += baseSecurity.acf
+DB_INSTALLS += ioc.template
+DB_INSTALLS += ioc_vxworks.template
+DB_INSTALLS += iocRTOS.template
+DB_INSTALLS += iocVxWorksOnly.template
+DB_INSTALLS += iocRTEMSOnly.template
+DB_INSTALLS += iocEnvVar.template
+DB_INSTALLS += iocCluster.template
+DB_INSTALLS += iocScanMon.template
+DB_INSTALLS += iocScanMonSum.template
+DB_INSTALLS += iocGeneralTime.template
+DB_INSTALLS += access.db
+#DB_INSTALLS += iocAdminVxWorks.template
+#DB_INSTALLS += iocAdminSoft.template
+#DB_INSTALLS += iocAdminRTEMS.template
+#DB_INSTALLS += iocAdminScanMon.template
+DB_INSTALLS += baseSecurity.acf
+DB_INSTALLS += iocGui.db
 
 #
 #----------------------------------------------------
