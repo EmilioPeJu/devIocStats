@@ -8,7 +8,7 @@ class _devIocStats(Device):
 
 class ioc(AutoSubstitution):
     Dependencies = (_devIocStats,)
-    TemplateFile = 'ioc.db'
+    TemplateFile = 'ioc.template'
 
 class ioc_vxworks(ioc):
     TemplateFile = 'ioc_vxworks.db'
