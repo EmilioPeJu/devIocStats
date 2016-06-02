@@ -11,7 +11,7 @@ class ioc(AutoSubstitution):
     TemplateFile = 'ioc.template'
 
 class ioc_vxworks(ioc):
-    TemplateFile = 'ioc_vxworks.db'
+    TemplateFile = 'ioc_vxworks.template'
 
 ## Create default Device IOC Stats definitions.
 class defaultIocStats(ModuleBase):
