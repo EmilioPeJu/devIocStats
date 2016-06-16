@@ -16,7 +16,6 @@ EDLS += ioc_stats_scanmon.edl
 EDLS += ioc_stats_softdls.edl
 
 # Top level display for all BL GW IOCs
-EDLS += BLGWStatus.edl
 EDLS += ioc_embed.edl
 
 DATA += $(EDLS)
