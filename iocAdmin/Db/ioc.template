@@ -1,15 +1,10 @@
 #% macro, __doc__, Create some records for reading IOC statistics and details.
-# Linux and VxWorks support
-#% macro, name, Object name and GUI association name
-#% macro, IOCNAME, Device prefix
-
-include "iocGui.db"
+#% macro, IOC, Device prefix
 
 # Used by Channel Access Security to determine access to this IOC.
 record(mbbo, "$(IOCNAME):ACCESS")
 {
   field(DESC, "$(IOCNAME) Acc Mode")
-  field(ASG,  "IOCMANAGERS")
   field(PINI, "YES")
   field(ZRST, "Running")
   field(ZRSV, "NO_ALARM")
@@ -26,21 +21,31 @@ record(stringin, "$(IOCNAME):STARTTOD")
     field(DESC, "Time and date of startup")
     field(DTYP, "Soft Timestamp")
     field(PINI, "YES")
-    field(INP, "@%Y/%m/%d %H:%M:%S")
+    field(INP, "@$(TODFORMAT)")
 }
 record(stringin, "$(IOCNAME):TOD")
 {
     field(DESC, "Current time and date")
     field(DTYP, "Soft Timestamp")
     field(SCAN, "1 second")
-    field(INP, "@%Y/%m/%d %H:%M:%S")
+    field(INP, "@$(TODFORMAT)")
 }
 record(calcout, "$(IOCNAME):HEARTBEAT")
 {
-    field(DESC, "1 Hz counter since boot")
+    field(DESC, "1 Hz counter since startup")
     field(CALC, "(A<2147483647)?A+1:1")
     field(SCAN, "1 second")
     field(INPA, "$(IOCNAME):HEARTBEAT")
+}
+# if autosave is working, START_CNT creates a running count of 
+# number of times the IOC was started.
+record(calcout, "$(IOCNAME):START_CNT")
+{
+    field(DESC, "Increments at startup")
+    field(CALC, "A+1")
+    field(PINI, "YES")
+    field(INPA, "$(IOCNAME):START_CNT")
+    info(autosaveFields_pass0, "VAL")
 }
 #
 # Using an existing internal set of subroutines, this
@@ -50,13 +55,13 @@ record(calcout, "$(IOCNAME):HEARTBEAT")
 record( sub, "$(IOCNAME):READACF")
 {
     field( DESC, "$(IOCNAME) ACF Update")
-    field( ASG,  "IOCMANAGERS")
     field( INAM, "asSubInit")
     field( SNAM, "asSubProcess")
     field( BRSV, "INVALID")
 }
 record(sub, "$(IOCNAME):SYSRESET")
 {
+    alias("$(IOCNAME):SysReset")
     field(DESC, "IOC Restart" )
     field(SNAM, "rebootProc")
     field(BRSV,"INVALID")
@@ -162,7 +167,6 @@ record(ai, "$(IOCNAME):IOC_CPU_LOAD") {
   field(HIGH, "70")
   field(HHSV, "MAJOR")
   field(HSV, "MINOR")
-  field(ADEL,"0.5")
   info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
 }
 
@@ -201,6 +205,8 @@ record(ai, "$(IOCNAME):MEM_FREE") {
   field(DTYP, "IOC stats")
   field(INP, "@free_bytes")
   field(EGU, "byte")
+  field(LLSV, "MAJOR")
+  field(LSV, "MINOR")
   info(autosaveFields_pass0, "HOPR LOPR LOW LOLO LSV LLSV")
 }
 
@@ -274,6 +280,15 @@ record(stringin, "$(IOCNAME):ST_SCRIPT2") {
   field(PINI, "YES")
 }
 
+record(waveform, "$(IOCNAME):ST_SCRIPT") {
+  field(DESC, "Startup Script")
+  field(DTYP, "IOC stats")
+  field(INP, "@startup_script")
+  field(NELM, "120")
+  field(FTVL, "CHAR")
+  field(PINI, "YES")
+}
+
 record(stringin, "$(IOCNAME):KERNEL_VERS") {
   field(DESC, "Kernel Version")
   field(DTYP, "IOC stats")
@@ -285,6 +300,15 @@ record(stringin, "$(IOCNAME):EPICS_VERS") {
   field(DESC, "EPICS Version")
   field(DTYP, "IOC stats")
   field(INP, "@epics_ver")
+  field(PINI, "YES")
+}
+
+record(waveform, "$(IOCNAME):EPICS_VERSION") {
+  field(DESC, "EPICS Version")
+  field(DTYP, "IOC stats")
+  field(INP, "@epics_ver")
+  field(NELM, "120")
+  field(FTVL, "CHAR")
   field(PINI, "YES")
 }
 
@@ -309,10 +333,12 @@ record(stringin, "$(IOCNAME):APP_DIR2") {
   field(PINI, "YES")
 }
 
-record(stringin, "$(IOCNAME):DLSVER") {
-  field(DESC, "Application Directory Part 2")
+record(waveform, "$(IOCNAME):APP_DIR") {
+  field(DESC, "Application Directory")
   field(DTYP, "IOC stats")
-  field(INP, "@dlsver")
+  field(INP, "@pwd")
+  field(NELM, "160")
+  field(FTVL, "CHAR")
   field(PINI, "YES")
 }
 
@@ -324,131 +350,37 @@ record(stringin, "$(IOCNAME):UPTIME") {
   field(PINI, "YES")
 }
 
+record(stringin, "$(IOCNAME):ENGINEER") {
+  field(DESC, "Engineer")
+  field(DTYP, "IOC stats")
+  field(INP, "@engineer")
+  field(PINI, "YES")
+}
 
-substitute "ENVNAME=LOCATION"
-substitute "ENVVAR=LOCATION"
-substitute "ENVTYPE=env"
-include "iocEnvVar.template"
+record(stringin, "$(IOCNAME):LOCATION") {
+  field(DESC, "Location")
+  field(DTYP, "IOC stats")
+  field(INP, "@location")
+  field(PINI, "YES")
+}
 
-substitute "ENVNAME=ENGINEER"
-substitute "ENVVAR=ENGINEER"
-substitute "ENVTYPE=env"
-include "iocEnvVar.template"
+record(ai, "$(IOCNAME):PROCESS_ID") {
+  field(DESC, "Process ID")
+  field(PINI, "YES")
+  field(DTYP, "IOC stats")
+  field(INP, "@proc_id")
+}
 
-substitute "ENVNAME=CA_ADDR_LIST"
-substitute "ENVVAR=EPICS_CA_ADDR_LIST"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
+record(ai, "$(IOCNAME):PARENT_ID") {
+  field(DESC, "Parent Process ID")
+  field(PINI, "YES")
+  field(DTYP, "IOC stats")
+  field(INP, "@parent_proc_id")
+}
 
-substitute "ENVNAME=CA_CONN_TIME"
-substitute "ENVVAR=EPICS_CA_CONN_TMO"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=CA_AUTO_ADDR"
-substitute "ENVVAR=EPICS_CA_AUTO_ADDR_LIST"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=CA_RPTR_PORT"
-substitute "ENVVAR=EPICS_CA_REPEATER_PORT"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=CA_SRVR_PORT"
-substitute "ENVVAR=EPICS_CA_SERVER_PORT"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=CA_MAX_ARRAY"
-substitute "ENVVAR=EPICS_CA_MAX_ARRAY_BYTES"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=CA_SRCH_TIME"
-substitute "ENVVAR=EPICS_CA_MAX_SEARCH_PERIOD"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=CA_BEAC_TIME"
-substitute "ENVVAR=EPICS_CA_BEACON_PERIOD"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=TIMEZONE"
-substitute "ENVVAR=EPICS_TIMEZONE"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=TS_NTP_INET"
-substitute "ENVVAR=EPICS_TS_NTP_INET"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=IOC_LOG_PORT"
-substitute "ENVVAR=EPICS_IOC_LOG_PORT"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "ENVNAME=IOC_LOG_INET"
-substitute "ENVVAR=EPICS_IOC_LOG_INET"
-substitute "ENVTYPE=epics"
-include "iocEnvVar.template"
-
-substitute "SCANNAME=01HZ"
-substitute "SCAN=10 second"
-substitute "MODE=1"
-substitute "MINOR_TOL=5.0"
-substitute "MAJOR_TOL=10.0"
-include "iocScanMon.template"
-
-substitute "SCANNAME=02HZ"
-substitute "SCAN=5 second"
-substitute "MODE=1"
-substitute "MINOR_TOL=5.0"
-substitute "MAJOR_TOL=10.0"
-include "iocScanMon.template"
-
-substitute "SCANNAME=05HZ"
-substitute "SCAN=2 second"
-substitute "MODE=1"
-substitute "MINOR_TOL=5.0"
-substitute "MAJOR_TOL=10.0"
-include "iocScanMon.template"
-
-substitute "SCANNAME=1HZ"
-substitute "SCAN=1 second"
-substitute "MODE=1"
-substitute "MINOR_TOL=5.0"
-substitute "MAJOR_TOL=10.0"
-include "iocScanMon.template"
-
-substitute "SCANNAME=2HZ"
-substitute "SCAN=.5 second"
-substitute "MODE=1"
-substitute "MINOR_TOL=5.0"
-substitute "MAJOR_TOL=10.0"
-include "iocScanMon.template"
-
-substitute "SCANNAME=5HZ"
-substitute "SCAN=.2 second"
-substitute "MODE=1"
-substitute "MINOR_TOL=5.0"
-substitute "MAJOR_TOL=10.0"
-include "iocScanMon.template"
-
-substitute "SCANNAME=10HZ"
-substitute "SCAN=.1 second"
-substitute "MODE=1"
-substitute "MINOR_TOL=5.0"
-substitute "MAJOR_TOL=10.0"
-include "iocScanMon.template"
-
-substitute "SCANNAME0=01HZ"
-substitute "SCANNAME1=02HZ"
-substitute "SCANNAME2=05HZ"
-substitute "SCANNAME3=1HZ"
-substitute "SCANNAME4=2HZ"
-substitute "SCANNAME5=5HZ"
-substitute "SCANNAME6=10HZ"
-include "iocScanMonSum.template"
+record(stringin, "$(IOCNAME):DLSVER") {
+  field(DESC, "IOC version")
+  field(DTYP, "IOC stats")
+  field(INP, "@dlsver")
+  field(PINI, "YES")
+}

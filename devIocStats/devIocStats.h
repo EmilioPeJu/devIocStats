@@ -41,12 +41,12 @@
 typedef int clustInfo[CLUSTSIZES][4];
 
 typedef struct {
-    unsigned long numBytesTotal;
-    unsigned long numBytesFree;
-    unsigned long numBytesAlloc;
-    unsigned long numBlocksFree;
-    unsigned long numBlocksAlloc;
-    unsigned long maxBlockSizeFree;
+    double numBytesTotal;
+    double numBytesFree;
+    double numBytesAlloc;
+    double numBlocksFree;
+    double numBlocksAlloc;
+    double maxBlockSizeFree;
 } memInfo;
 
 typedef struct {
@@ -103,10 +103,9 @@ extern int devIocStatsGetIFErrors (ifErrInfo *pval);
 
 /* Boot Info */
 extern int devIocStatsInitBootInfo (void);
-extern int devIocStatsGetStartupScript (char **pval);
 extern int devIocStatsGetBootLine (char **pval);
-extern int devIocStatsGetEngineer (char **pval);
-extern int devIocStatsGetLocation (char **pval);
+extern int devIocStatsGetStartupScript (char **pval);
+extern int devIocStatsGetStartupScriptDefault (char **pval);
 
 /* System Info */
 extern int devIocStatsInitSystemInfo (void);
@@ -117,3 +116,5 @@ extern int devIocStatsGetKernelVersion (char **pval);
 extern int devIocStatsInitHostInfo (void);
 extern int devIocStatsGetPwd (char **pval);
 extern int devIocStatsGetHostname (char **pval);
+extern int devIocStatsGetPID (double *proc_id);
+extern int devIocStatsGetPPID (double *proc_id);

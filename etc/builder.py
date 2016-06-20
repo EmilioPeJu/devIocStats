@@ -33,10 +33,10 @@ class iocGui(AutoSubstitution):
 @includesTemplates(iocGui)
 class ioc(AutoSubstitution):
     Dependencies = (_devIocStats,)
-    TemplateFile = 'ioc.template'
+    TemplateFile = 'ioc.db'
 
 class ioc_vxworks(ioc):
-    TemplateFile = 'ioc_vxworks.template'
+    TemplateFile = 'ioc_vxworks.db'
 
 ## Create default Device IOC Stats definitions.
 class defaultIocStats(ModuleBase):

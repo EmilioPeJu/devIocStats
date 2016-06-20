@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 536
-y 334
+x 551
+y 190
 w 540
-h 585
+h 690
 font "helvetica-medium-r-12.0"
 ctlFont "helvetica-medium-r-12.0"
 btnFont "helvetica-medium-r-12.0"
@@ -32,7 +32,7 @@ major 4
 minor 0
 release 0
 x 10
-y 255
+y 360
 w 520
 h 35
 lineColor index 3
@@ -77,7 +77,7 @@ major 4
 minor 0
 release 0
 x 10
-y 295
+y 400
 w 520
 h 155
 lineColor index 3
@@ -106,7 +106,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 0
 w 345
@@ -126,7 +126,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 55
 w 69
@@ -146,7 +146,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 352
 y 536528
 w 54
@@ -208,7 +208,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 330
 y 60
 w 71
@@ -223,41 +223,12 @@ value {
 autoSize
 endObjectProperties
 
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 375
-y 10
-w 95
-h 25
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-buttonLabel "Home Screen..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "lcls_main"
-}
-setPosition {
-  0 "parentWindow"
-}
-replaceSymbols {
-  0 1
-}
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 80
 w 71
@@ -277,7 +248,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 105
 w 45
@@ -297,7 +268,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 130
 w 54
@@ -317,7 +288,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 155
 w 57
@@ -471,7 +442,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 330
 y 95
 w 90
@@ -513,7 +484,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 330
 y 130
 w 75
@@ -602,7 +573,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 180
 w 61
@@ -622,7 +593,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 205
 w 61
@@ -642,7 +613,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 230
 w 48
@@ -662,9 +633,48 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
+release 1
+x 50
+y 370
+w 32
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Mode"
+}
+autoSize
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
 release 0
+x 90
+y 365
+w 105
+h 25
+fgColor index 14
+bgColor index 4
+inconsistentColor index 12
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(ioc):ACCESS"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
 x 15
-y 305
+y 410
 w 83
 h 14
 font "helvetica-medium-r-12.0"
@@ -684,10 +694,10 @@ major 10
 minor 0
 release 0
 x 110
-y 300
-w 270
+y 405
+w 415
 h 20
-controlPv "$(ioc):EPICS_VERS"
+controlPv "$(ioc):EPICS_VERSION"
 displayMode "decimal"
 precision 1
 fgColor index 16
@@ -705,9 +715,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
-y 350
+y 455
 w 118
 h 14
 font "helvetica-medium-r-12.0"
@@ -727,32 +737,10 @@ major 10
 minor 0
 release 0
 x 15
-y 370
-w 230
+y 475
+w 510
 h 25
-controlPv "$(ioc):APP_DIR1"
-displayMode "decimal"
-precision 1
-fgColor index 16
-fgAlarm
-bgColor index 12
-fill
-font "helvetica-medium-r-12.0"
-lineWidth 2
-lineAlarm
-endObjectProperties
-
-# (Textupdate)
-object TextupdateClass
-beginObjectProperties
-major 10
-minor 0
-release 0
-x 245
-y 370
-w 230
-h 25
-controlPv "$(ioc):APP_DIR2"
+controlPv "$(ioc):APP_DIR"
 displayMode "decimal"
 precision 1
 fgColor index 16
@@ -769,9 +757,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
-y 400
+y 505
 w 75
 h 14
 font "helvetica-medium-r-12.0"
@@ -791,10 +779,10 @@ major 10
 minor 0
 release 0
 x 15
-y 420
-w 230
+y 525
+w 510
 h 25
-controlPv "$(ioc):ST_SCRIPT1"
+controlPv "$(ioc):ST_SCRIPT"
 displayMode "decimal"
 precision 1
 fgColor index 16
@@ -804,55 +792,6 @@ fill
 font "helvetica-medium-r-12.0"
 lineWidth 2
 lineAlarm
-endObjectProperties
-
-# (Textupdate)
-object TextupdateClass
-beginObjectProperties
-major 10
-minor 0
-release 0
-x 245
-y 420
-w 230
-h 25
-controlPv "$(ioc):ST_SCRIPT2"
-displayMode "decimal"
-precision 1
-fgColor index 16
-fgAlarm
-bgColor index 12
-fill
-font "helvetica-medium-r-12.0"
-lineWidth 2
-lineAlarm
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 420
-y 260
-w 100
-h 25
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-buttonLabel "Reboot..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "ioc_stats_reboot_confirm"
-}
-setPosition {
-  0 "button"
-}
-colorPv "$(ioc):SYSRESET.SEVR"
 endObjectProperties
 
 # (Static Text)
@@ -860,9 +799,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
-y 330
+y 435
 w 65
 h 14
 font "helvetica-medium-r-12.0"
@@ -882,7 +821,7 @@ major 4
 minor 0
 release 0
 x 10
-y 455
+y 560
 w 160
 h 120
 lineColor index 3
@@ -897,7 +836,7 @@ major 4
 minor 0
 release 0
 x 325
-y 455
+y 560
 w 205
 h 120
 lineColor index 3
@@ -912,7 +851,7 @@ major 10
 minor 0
 release 0
 x 80
-y 480
+y 585
 w 85
 h 20
 controlPv "$(ioc):MEM_FREE"
@@ -934,7 +873,7 @@ major 10
 minor 0
 release 0
 x 80
-y 505
+y 610
 w 85
 h 20
 controlPv "$(ioc):MEM_USED"
@@ -954,9 +893,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
-y 460
+y 565
 w 94
 h 14
 font "helvetica-medium-r-12.0"
@@ -974,9 +913,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 485
+y 590
 w 26
 h 14
 font "helvetica-medium-r-12.0"
@@ -994,9 +933,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 505
+y 610
 w 28
 h 14
 font "helvetica-medium-r-12.0"
@@ -1014,9 +953,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 330
-y 460
+y 565
 w 57
 h 14
 font "helvetica-medium-r-12.0"
@@ -1036,7 +975,7 @@ major 10
 minor 0
 release 0
 x 430
-y 480
+y 585
 w 95
 h 30
 controlPv "$(ioc):IOC_CPU_LOAD"
@@ -1057,7 +996,7 @@ major 4
 minor 0
 release 0
 x 175
-y 455
+y 560
 w 145
 h 120
 lineColor index 3
@@ -1070,9 +1009,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 180
-y 460
+y 565
 w 99
 h 14
 font "helvetica-medium-r-12.0"
@@ -1092,7 +1031,7 @@ major 10
 minor 0
 release 0
 x 220
-y 480
+y 585
 w 95
 h 30
 controlPv "$(ioc):FD_FREE"
@@ -1114,7 +1053,7 @@ major 10
 minor 0
 release 0
 x 220
-y 515
+y 620
 w 95
 h 20
 controlPv "$(ioc):FD_MAX"
@@ -1134,9 +1073,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 185
-y 490
+y 595
 w 26
 h 14
 font "helvetica-medium-r-12.0"
@@ -1154,9 +1093,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 185
-y 520
+y 625
 w 24
 h 14
 font "helvetica-medium-r-12.0"
@@ -1176,8 +1115,8 @@ major 10
 minor 0
 release 0
 x 110
-y 325
-w 270
+y 430
+w 415
 h 20
 controlPv "$(ioc):KERNEL_VERS"
 displayMode "decimal"
@@ -1199,7 +1138,7 @@ major 10
 minor 0
 release 0
 x 80
-y 530
+y 635
 w 85
 h 20
 controlPv "$(ioc):MEM_MAX"
@@ -1219,9 +1158,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 20
-y 525
+y 630
 w 52
 h 28
 font "helvetica-medium-r-12.0"
@@ -1240,9 +1179,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 335
-y 490
+y 595
 w 84
 h 14
 font "helvetica-medium-r-12.0"
@@ -1262,7 +1201,7 @@ major 10
 minor 0
 release 0
 x 430
-y 515
+y 620
 w 95
 h 30
 controlPv "$(ioc):SYS_CPU_LOAD"
@@ -1281,9 +1220,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 335
-y 515
+y 620
 w 56
 h 28
 font "helvetica-medium-r-12.0"
@@ -1304,7 +1243,7 @@ major 10
 minor 0
 release 0
 x 430
-y 550
+y 655
 w 95
 h 20
 controlPv "$(ioc):CPU_CNT"
@@ -1324,9 +1263,9 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 335
-y 555
+y 660
 w 86
 h 14
 font "helvetica-medium-r-12.0"
@@ -1343,7 +1282,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 4
 release 0
 x 325
 y 160
@@ -1372,7 +1311,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 4
 release 0
 x 415
 y 160
@@ -1398,10 +1337,45 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 4
 release 0
 x 325
 y 190
+w 115
+h 25
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Release Versions..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "ioc_stats_release"
+}
+setPosition {
+  0 "parentWindow"
+}
+symbols {
+  0 "ioc=$(ioc),idx=0,p=1"
+}
+replaceSymbols {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 325
+y 220
 w 115
 h 25
 fgColor index 14
@@ -1427,5 +1401,330 @@ replaceSymbols {
 propagateMacros {
   0 0
 }
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 425
+y 365
+w 100
+h 25
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Reboot..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "ioc_stats_reboot_confirm"
+}
+setPosition {
+  0 "button"
+}
+colorPv "$(ioc):SYSRESET.SEVR"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 205
+y 365
+w 210
+h 25
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Reload Access Security Conf File..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "ioc_stats_reloadacf_confirm"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 255
+w 520
+h 100
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 130
+y 260
+w 131
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "General Time Providers"
+}
+autoSize
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 90
+y 280
+w 220
+h 20
+controlPv "$(ioc):GTIM_CUR_SRC"
+displayMode "decimal"
+precision 1
+fgColor index 16
+fgAlarm
+bgColor index 12
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+lineWidth 2
+lineAlarm
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 90
+y 305
+w 220
+h 20
+controlPv "$(ioc):GTIM_EVT_SRC"
+displayMode "decimal"
+precision 1
+fgColor index 15
+bgColor index 12
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+lineWidth 0
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 90
+y 330
+w 220
+h 20
+controlPv "$(ioc):GTIM_HI_SRC"
+displayMode "decimal"
+precision 1
+fgColor index 16
+fgAlarm
+bgColor index 12
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+lineWidth 2
+lineAlarm
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 285
+w 41
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Current"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 310
+w 32
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Event"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 335
+w 68
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Highest Prio"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 325
+y 275
+w 62
+h 28
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "# Secs "
+  "since 1990"
+}
+autoSize
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 395
+y 280
+w 130
+h 20
+controlPv "$(ioc):GTIM_TIME"
+displayMode "decimal"
+precision 1
+fgColor index 16
+fgAlarm
+bgColor index 12
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+lineWidth 2
+lineAlarm
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 325
+y 315
+w 44
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "# Errors"
+}
+autoSize
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 395
+y 310
+w 70
+h 25
+controlPv "$(ioc):GTIM_ERR_CNT"
+displayMode "decimal"
+fgColor index 16
+fgAlarm
+bgColor index 12
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+lineWidth 2
+lineAlarm
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 475
+y 310
+w 50
+h 25
+fgColor index 14
+onColor index 4
+offColor index 4
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(ioc):GTIM_RESET.PROC"
+pressValue "0"
+onLabel "Reset"
+offLabel "Reset"
+3d
+useEnumNumeric
+font "helvetica-medium-r-12.0"
 endObjectProperties
 

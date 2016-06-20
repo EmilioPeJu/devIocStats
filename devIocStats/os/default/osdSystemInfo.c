@@ -9,18 +9,24 @@
 * in file LICENSE that is included with this distribution.
 \*************************************************************************/
 
-/* osdMemUsage.c - Memory usage info: default implementation = do nothing */
-
-/*
- *  Author: Ralph Lange (HZB/BESSY)
- *
- *  Modification History
- *  2009-05-13 Ralph Lange (HZB/BESSY)
- *     Restructured OSD parts
- *
- */
+/* osdSystemInfo.c - System info strings: posix implementation = use uname() */
 
 #include <devIocStats.h>
 
-int devIocStatsInitMemUsage (void) { return 0; }
-int devIocStatsGetMemUsage (memInfo *pmi) { return -1; }
+static char *notavail = "<not available>";
+
+int devIocStatsInitSystemInfo (void) {
+    return 0;
+}
+
+int devIocStatsGetBSPVersion (char **pval)
+{
+    *pval = notavail;
+    return -1;
+}
+
+int devIocStatsGetKernelVersion (char **pval)
+{
+    *pval = notavail;
+    return 0;
+}

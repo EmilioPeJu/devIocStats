@@ -4,21 +4,22 @@ include $(TOP)/configure/CONFIG
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 
 # Low-level stats displays
-EDLS += ioc_stats.edl
-EDLS += ioc_stats_clust.edl
-EDLS += ioc_stats_epics_env.edl
-EDLS += ioc_stats_limits.edl
-EDLS += ioc_stats_reboot_confirm.edl
-EDLS += ioc_stats_release.edl
-EDLS += ioc_stats_soft.edl
-EDLS += ioc_stats_vxworks.edl
-EDLS += ioc_stats_scanmon.edl
-EDLS += ioc_stats_softdls.edl
+EDL += ioc_stats.edl
+EDL += ioc_stats_clust.edl
+EDL += ioc_stats_epics_env.edl
+EDL += ioc_stats_limits.edl
+EDL += ioc_stats_reboot_confirm.edl
+EDL += ioc_stats_release.edl
+EDL += ioc_stats_soft.edl
+EDL += ioc_stats_vxworks.edl
+EDL += ioc_stats_scanmon.edl
+EDL += ioc_stats_reloadacf_confirm.edl
 
-# Top level display for all BL GW IOCs
-EDLS += ioc_embed.edl
+# DLS
 
-DATA += $(EDLS)
+EDL += ioc_embed.edl ioc_stats_softdls.edl
+
+DATA += $(EDL)
 
 include $(TOP)/configure/RULES
 #----------------------------------------

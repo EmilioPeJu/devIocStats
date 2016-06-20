@@ -1,35 +1,35 @@
-# % gui, $(name=None), edm, $(EDM_FILE=ioc_stats_softdls.edl), ioc=$(IOCNAME)
-# % gui, $(name=None), edmembed, ioc_embed.edl, ioc=$(IOCNAME),EDM_FILE=$(EDM_FILE=ioc_stats_softdls.edl)
+# % gui, $(name=None), edm, $(EDM_FILE=ioc_stats_softdls.edl), ioc=$(IOC)
+# % gui, $(name=None), edmembed, ioc_embed.edl, ioc=$(IOC),EDM_FILE=$(EDM_FILE=ioc_stats_softdls.edl)
 
 
 
 # This associates BOY screens with the template
-# % gui, $(name=None), boydetail, devIocStatsApp_opi/ioc_detail.opi, desc=$(IOCNAME), IOCNAME=$(IOCNAME), name=$(name=None)
-# % gui, $(name=None), boyembed, devIocStatsApp_opi/ioc_embed.opi, desc=$(IOCNAME),  IOCNAME=$(IOCNAME), name=$(name=None)
-# % gui, $(name=None), boyembed, devIocStatsApp_opi/ioc_embed_box.opi, desc=$(IOCNAME),  IOCNAME=$(IOCNAME), name=$(name=None)
+# % gui, $(name=None), boydetail, devIocStatsApp_opi/ioc_detail.opi, desc=$(IOC), IOC=$(IOC), name=$(name=None)
+# % gui, $(name=None), boyembed, devIocStatsApp_opi/ioc_embed.opi, desc=$(IOC),  IOC=$(IOC), name=$(name=None)
+# % gui, $(name=None), boyembed, devIocStatsApp_opi/ioc_embed_box.opi, desc=$(IOC),  IOC=$(IOC), name=$(name=None)
 
 # These define what PVs a detail screen should contain
-# % gui, $(name=None), readback, Startup Time,$(IOCNAME):STARTOD
-# % gui, $(name=None), readback, Current Time,$(IOCNAME):TOD
-# % gui, $(name=None), readback, Up Time,$(IOCNAME):UPTIME
-# % gui, $(name=None), readback, Heartbeat,$(IOCNAME):HEARTBEAT
-# % gui, $(name=None), readback, Records,$(IOCNAME):RECORD_CNT
-# % gui, $(name=None), readback, Host Name,$(IOCNAME):HOSTNAME
-# % gui, $(name=None), readback, User Name,$(IOCNAME):ENGINEER
-# % gui, $(name=None), readback, Location,$(IOCNAME):LOCATION
-# % gui, $(name=None), readback, CA Clients,$(IOCNAME):CA_CLNT_CNT
-# % gui, $(name=None), readback, CA PV Conns,$(IOCNAME):CA_CONN_CNT
-# % gui, $(name=None), readback, Susp Tasks,$(IOCNAME):SUSP_TASK_CNT
-# % gui, $(name=None), readback, EPICS Version,$(IOCNAME):EPICS_VERS
-# % gui, $(name=None), readback, OS Version,$(IOCNAME):KERNEL_VERS
-# % gui, $(name=None), readback, Application Directory,$(IOCNAME):APP_DIR1
-# % gui, $(name=None), readback, Startup Script,$(IOCNAME):ST_SCRIPT1
-# % gui, $(name=None), readback, Memory Free,$(IOCNAME):MEM_FREE
-# % gui, $(name=None), readback, Memory Used,$(IOCNAME):MEM_USED
-# % gui, $(name=None), readback, Memory Max,$(IOCNAME):MEM_MAX
-# % gui, $(name=None), readback, File Handles Free,$(IOCNAME):FD_FREE
-# % gui, $(name=None), readback, File Handles Max,$(IOCNAME):FD_MAX
-# % gui, $(name=None), readback, IOC CPU Load,$(IOCNAME):IOC_CPU_LOAD
-# % gui, $(name=None), readback, All CPUs Load,$(IOCNAME):SYS_CPU_LOAD
-# % gui, $(name=None), readback, System CPUs,$(IOCNAME):CPU_CNT
+# % gui, $(name=None), readback, Startup Time,$(IOC):STARTOD
+# % gui, $(name=None), readback, Current Time,$(IOC):TOD
+# % gui, $(name=None), readback, Up Time,$(IOC):UPTIME
+# % gui, $(name=None), readback, Heartbeat,$(IOC):HEARTBEAT
+# % gui, $(name=None), readback, Records,$(IOC):RECORD_CNT
+# % gui, $(name=None), readback, Host Name,$(IOC):HOSTNAME
+# % gui, $(name=None), readback, User Name,$(IOC):ENGINEER
+# % gui, $(name=None), readback, Location,$(IOC):LOCATION
+# % gui, $(name=None), readback, CA Clients,$(IOC):CA_CLNT_CNT
+# % gui, $(name=None), readback, CA PV Conns,$(IOC):CA_CONN_CNT
+# % gui, $(name=None), readback, Susp Tasks,$(IOC):SUSP_TASK_CNT
+# % gui, $(name=None), readback, EPICS Version,$(IOC):EPICS_VERS
+# % gui, $(name=None), readback, OS Version,$(IOC):KERNEL_VERS
+# % gui, $(name=None), readback, Application Directory,$(IOC):APP_DIR1
+# % gui, $(name=None), readback, Startup Script,$(IOC):ST_SCRIPT1
+# % gui, $(name=None), readback, Memory Free,$(IOC):MEM_FREE
+# % gui, $(name=None), readback, Memory Used,$(IOC):MEM_USED
+# % gui, $(name=None), readback, Memory Max,$(IOC):MEM_MAX
+# % gui, $(name=None), readback, File Handles Free,$(IOC):FD_FREE
+# % gui, $(name=None), readback, File Handles Max,$(IOC):FD_MAX
+# % gui, $(name=None), readback, IOC CPU Load,$(IOC):IOC_CPU_LOAD
+# % gui, $(name=None), readback, All CPUs Load,$(IOC):SYS_CPU_LOAD
+# % gui, $(name=None), readback, System CPUs,$(IOC):CPU_CNT
 

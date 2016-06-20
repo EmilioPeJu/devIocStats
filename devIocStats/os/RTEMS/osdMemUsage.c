@@ -53,8 +53,14 @@ int devIocStatsInitMemUsage (void) { return 0; }
 int devIocStatsGetMemUsage (memInfo *pval)
 {
 #ifdef RTEMS_PROTECTED_HEAP
+# if   (__RTEMS_MAJOR__ > 4) \
+   || (__RTEMS_MAJOR__ == 4 && __RTEMS_MINOR__ > 9)
+    extern Heap_Control *RTEMS_Malloc_Heap;
+    Heap_Control *h = RTEMS_Malloc_Heap;
+# else
     extern Heap_Control RTEMS_Malloc_Heap;
     Heap_Control *h = &RTEMS_Malloc_Heap;
+# endif
     Heap_Information_block info;
 
     _Protected_heap_Get_information(h, &info);
@@ -66,9 +72,9 @@ int devIocStatsGetMemUsage (memInfo *pval)
     rtems_region_get_information(h, &info);
     /* rtems' malloc_free_space() looks at 'largest' -- why not 'total'? */
 #endif /* RTEMS_PROTECTED_HEAP */
-    pval->numBytesTotal    = info.Free.total + info.Used.total;
-    pval->numBytesFree     = info.Free.total;
-    pval->numBytesAlloc    = info.Used.total;
-    pval->maxBlockSizeFree = info.Free.largest;
+    pval->numBytesTotal    = (double)info.Free.total + (double)info.Used.total;
+    pval->numBytesFree     = (double)info.Free.total;
+    pval->numBytesAlloc    = (double)info.Used.total;
+    pval->maxBlockSizeFree = (double)info.Free.largest;
     return 0;
 }
