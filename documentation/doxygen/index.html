@@ -18,9 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
-      <li><a href="dirs.html"><span>Directories</span></a></li>
       <li id="searchli">
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -52,55 +50,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="http://www.slac.stanford.edu/grp/cd/soft/epics/site/devIocStats/">Link to devIocStats at SLAC</a>. <br/>
 </p>
 <h3>Installing devIocStats on a linux IOC</h3>
-<p>The only template needed is <code>ioc.db</code>. This is used like:</p>
+<p>Use devIocStats.dbd and the devIocStats library, either libdevIocStats.a for static builds or libdevIocStats.so for dynamic builds.</p>
 <pre>
 <code>
-file ioc.db
+file iocAdminSoft.db
 {
-pattern {IOCNAME}
-        {BL16I-MO-IOC-01}
+	pattern
+	{
+		IOC
+	}
+        {
+		&lt;dom&gt;-&lt;tech&gt;-IOC-01
+	}
+}</code></pre><pre><code>file iocAdminScanMon.db
+{
+	pattern
+	{
+		IOC
+	}
+        {
+		&lt;dom&gt;-&lt;tech&gt;-IOC-01
+	}
 }
 </code>
-</pre><p>The associated EDM screen is <code>ioc_stats_soft.edl</code>.</p>
+</pre><p>The associated EDM screen is <code>ioc_stats_softdls.edl</code>.</p>
 <h3>Installing devIocStats on a VxWorks IOC</h3>
-<p>The only template needed is <code>ioc_vxworks.db</code>. This is used like:</p>
+<p>Use devIocStats.dbd and the devIocStats library.</p>
 <pre>
 <code>
-file ioc_vxworks.db
+file iocAdminVxWorks.db
 {
-pattern {IOCNAME}
-        {BL16I-MO-IOC-01}
+	pattern
+	{
+		IOC
+	}
+        {
+		&lt;dom&gt;-&lt;tech&gt;-IOC-01
+	}
+}</code></pre><pre><code>file iocAdminScanMon.db
+{
+	pattern
+	{
+		IOC
+	}
+        {
+		&lt;dom&gt;-&lt;tech&gt;-IOC-01
+	}
 }
 </code>
-</pre><p>The associated EDM screen is <code>ioc_stats_vxworks.edl</code>.</p>
-<h3>List of PVs that have archiver or alarm handler tags</h3>
-<table  border="1">
-<tr>
-<td><b>PV</b> </td><td><b>DESCRIPTION</b> </td><td><b>ARCHIVED</b> </td><td><b>ALARM HANDLER</b>  </td></tr>
-<tr>
-<td>CA_CLNT_CNT </td><td>Number of CA Clients </td><td>Yes </td><td>Yes  </td></tr>
-<tr>
-<td>CA_CONN_CNT </td><td>Number of CA Connections </td><td>Yes </td><td>Yes  </td></tr>
-<tr>
-<td>FD_FREE </td><td>Number of free file descriptors </td><td>Yes </td><td>Yes  </td></tr>
-<tr>
-<td>LOAD </td><td>CPU Load </td><td>Yes </td><td>Yes  </td></tr>
-<tr>
-<td>SUSP_TASK_CNT </td><td>Number of suspended tasks </td><td>Yes </td><td>Yes  </td></tr>
-<tr>
-<td>MEM_USED </td><td>Allocated memory </td><td>Yes </td><td>No  </td></tr>
-<tr>
-<td>MEM_FREE </td><td>Free memory </td><td>Yes </td><td>No  </td></tr>
-</table>
-<h3>Module contact:</h3>
-<p>Matthew Pearson (mp49) </p>
+</pre><p>The template iocGui.db contains beamlines information and includes deafults for all macros. The templates ioc.db and ioc_vxworks.db with the macro IOCNAME will be removed in the future. They are made by concatenating iocGui.db, iocAdminSoft.db or iocAdminVxWorks.db and iocAdminScanMon.db. </p>
 </div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Files</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,7 +114,7 @@ pattern {IOCNAME}
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Fri Feb 6 2015 16:38:32 for devIocStats by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Jun 21 2016 08:48:02 for devIocStats by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -10,91 +10,67 @@ It is developed and maintained at SLAC:\n
 
 <h3>Installing devIocStats on a linux IOC</h3>
 
-The only template needed is <code>ioc.db</code>. This is used like:
+Use devIocStats.dbd and the devIocStats library, either libdevIocStats.a for static builds or libdevIocStats.so for dynamic builds.
 
 <pre>
 <code>
-file ioc.db
+file iocAdminSoft.db
 {
-pattern {IOCNAME}
-        {BL16I-MO-IOC-01}
+	pattern
+	{
+		IOC
+	}
+        {
+		&lt;dom&gt;-&lt;tech&gt;-IOC-01
+	}
+}
+
+file iocAdminScanMon.db
+{
+	pattern
+	{
+		IOC
+	}
+        {
+		&lt;dom&gt;-&lt;tech&gt;-IOC-01
+	}
 }
 </code>
 </pre>
 
-The associated EDM screen is <code>ioc_stats_soft.edl</code>.
+The associated EDM screen is <code>ioc_stats_softdls.edl</code>.
 
 <h3>Installing devIocStats on a VxWorks IOC</h3>
 
-The only template needed is <code>ioc_vxworks.db</code>. This is used like:
+Use devIocStats.dbd and the devIocStats library.
 
 <pre>
 <code>
-file ioc_vxworks.db
+file iocAdminVxWorks.db
 {
-pattern {IOCNAME}
-        {BL16I-MO-IOC-01}
+	pattern
+	{
+		IOC
+	}
+        {
+		&lt;dom&gt;-&lt;tech&gt;-IOC-01
+	}
+}
+
+file iocAdminScanMon.db
+{
+	pattern
+	{
+		IOC
+	}
+        {
+		&lt;dom&gt;-&lt;tech&gt;-IOC-01
+	}
 }
 </code>
 </pre>
 
-The associated EDM screen is <code>ioc_stats_vxworks.edl</code>.
-
-<h3>List of PVs that have archiver or alarm handler tags</h3>
-
-<table border="1">
-<tr>
-<td><b>PV</b></td>
-<td><b>DESCRIPTION</b></td>
-<td><b>ARCHIVED</b></td>
-<td><b>ALARM HANDLER</b></td>
-</tr>
-<tr>
-<td>CA_CLNT_CNT</td>
-<td>Number of CA Clients</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>CA_CONN_CNT</td>
-<td>Number of CA Connections</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>FD_FREE</td>
-<td>Number of free file descriptors</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>LOAD</td>
-<td>CPU Load</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>SUSP_TASK_CNT</td>
-<td>Number of suspended tasks</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>MEM_USED</td>
-<td>Allocated memory</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>MEM_FREE</td>
-<td>Free memory</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-</table>
-
-<h3>Module contact:</h3>
-Matthew Pearson (mp49)
-
+The template iocGui.db contains beamlines information and includes deafults for all macros.
+The templates ioc.db and ioc_vxworks.db with the macro IOCNAME will be removed in the future. They are made by concatenating iocGui.db, iocAdminSoft.db or iocAdminVxWorks.db and iocAdminScanMon.db.
 
 **/
