@@ -33,7 +33,7 @@
   </foreground_color>
   <actions hook="false" hook_all="false" />
   <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
-    <opi_file>ioc_embed.opi</opi_file>
+    <opi_file>iocStats_embed.opi</opi_file>
     <border_style>13</border_style>
     <tooltip />
     <rules />

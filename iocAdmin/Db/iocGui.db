@@ -4,9 +4,9 @@
 
 
 # This associates BOY screens with the template
-# % gui, $(name=None), boydetail, devIocStatsApp_opi/ioc_detail.opi, desc=$(IOC), IOC=$(IOC), name=$(name=None)
-# % gui, $(name=None), boyembed, devIocStatsApp_opi/ioc_embed.opi, desc=$(IOC),  IOC=$(IOC), name=$(name=None)
-# % gui, $(name=None), boyembed, devIocStatsApp_opi/ioc_embed_box.opi, desc=$(IOC),  IOC=$(IOC), name=$(name=None)
+# % gui, $(name=None), boydetail, devIocStatsApp_opi/iocStats_detail.opi, desc=$(IOC), IOC=$(IOC), name=$(name=None)
+# % gui, $(name=None), boyembed, devIocStatsApp_opi/iocStats_embed.opi, desc=$(IOC),  IOC=$(IOC), name=$(name=None)
+# % gui, $(name=None), boyembed, devIocStatsApp_opi/iocStats_embed_box.opi, desc=$(IOC),  IOC=$(IOC), name=$(name=None)
 
 # These define what PVs a detail screen should contain
 # % gui, $(name=None), readback, Startup Time,$(IOC):STARTOD
