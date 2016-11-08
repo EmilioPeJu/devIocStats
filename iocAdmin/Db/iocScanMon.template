@@ -1,3 +1,6 @@
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+#% macro, IOC, Device prefix
+
 record(bo, "$(IOCNAME):$(SCANNAME)_MODE") {
 	field(DESC, "$(SCANNAME) Mode")
 	field(DOL, "$(MODE)")

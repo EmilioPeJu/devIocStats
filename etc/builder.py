@@ -1,54 +1,48 @@
-from iocbuilder import AutoSubstitution, Device, ModuleBase, Call_TargetOS
+from iocbuilder import AutoSubstitution, Device, Architecture, ModuleBase
 from iocbuilder.arginfo import *
-
-# This decorator provides the ability to create a template class
-# that overrides another template.  Use this when a *.template file
-# has an include statement.  This functionality will be moved into
-# iocbuilder in the future
-# Shamelessly stolen from ADCore 2-4dls2 - EW 14/06/16
-def includesTemplates(*templates):
-    def decorator(cls):
-        arginfo = templates[0].ArgInfo
-        arguments = list(templates[0].Arguments)
-        defaults = templates[0].Defaults.copy()
-        for template in templates[1:]:
-            arginfo += template.ArgInfo
-            arguments += [x for x in template.Arguments if x not in arguments]
-            defaults.update(template.Defaults)
-        cls.ArgInfo = arginfo + cls.ArgInfo
-        cls.Arguments = list(cls.Arguments) + [x for x in arguments if x not in cls.Arguments]
-        defaults.update(cls.Defaults)
-        cls.Defaults = defaults
-        return cls
-    return decorator    
 
 class _devIocStats(Device):
     LibFileList = ['devIocStats']
     DbdFileList = ['devIocStats']
     AutoInstantiate = True
 
-class iocGui(AutoSubstitution):
-    TemplateFile = 'iocGui.db'
-
-@includesTemplates(iocGui)
-class ioc(AutoSubstitution):
+class iocAdminScanMon(AutoSubstitution):
     Dependencies = (_devIocStats,)
-    TemplateFile = 'ioc.db'
+    TemplateFile = 'iocAdminScanMon.db'
 
-class ioc_vxworks(ioc):
-    TemplateFile = 'ioc_vxworks.db'
+class iocAdminVxWorks(AutoSubstitution):
+    Dependencies = (_devIocStats,)    
+    TemplateFile = 'iocAdminVxWorks.db'
 
-## Create default Device IOC Stats definitions.
-class defaultIocStats(ModuleBase):
-    def __init__(self, ioc_name, name = ''):
-        Call_TargetOS(self, 'ioc')(IOCNAME = ioc_name, name = name)
-        
-    def ioc_linux(self):
-        return ioc
+class iocAdminSoft(AutoSubstitution):
+    Dependencies = (_devIocStats, )
+    TemplateFile = "iocAdminSoft.db"
 
-    def ioc_vxWorks(self, **kargs):
-        return ioc_vxworks
+class iocGui(AutoSubstitution):
+    TemplateFile = "iocGui.db"
+    
+class devIocStatsHelper(ModuleBase):
+    Dependencies = (_devIocStats,)
+    def __init__(self, name, ioc,
+                 scanMonitor=True, guiTags=True,
+                 screen="ioc_stats_softdls.edl"):
+        self.name = name
+        self.ioc = ioc
+        if Architecture().startswith("linux"):
+            iocAdminSoft(IOC= ioc)
+        elif Architecture().startswith("vxWorks"):
+            iocAdminVxWorks(IOC= ioc)
+        if scanMonitor:
+            iocAdminScanMon(IOC= ioc)
+        if guiTags:
+            iocGui(IOC= ioc, name=name, EDM_FILE=screen)
 
-    ArgInfo = makeArgInfo(__init__,
-        ioc_name = Simple('IOC name'),
-        name = Simple('GUI name, optional'))
+    ArgInfo = makeArgInfo(
+        __init__,
+        name = Simple("gui element name", str),
+        ioc = Simple("ioc name", str),
+        scanMonitor = Simple("choice to include scan monitor", bool),
+        guiTags = Simple("choice to include gui tags", bool),
+        screen = Simple("edm file for gui tags", str)
+    )
+    
