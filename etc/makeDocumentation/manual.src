@@ -1,6 +1,8 @@
 /**
 \mainpage devIocStats EPICS Support Module
 
+These are documentation notes written by the DLS maintainers. 
+
 <h3>Introduction</h3>
 
 devIocStats is a cross platform IOC statistics module. On VxWorks it replaces the vxStats support module.\n 
@@ -66,7 +68,23 @@ file iocAdminScanMon.db
 }
 </code>
 </pre>
-The template iocGui.db contains beamlines information and includes deafults for all macros.<br>
+
+The template iocGui.db contains beamlines information and includes
+deafults for all macros.<br>
+
 The templates ioc.db and ioc_vxworks.db with the macro IOCNAME will be removed in the future. They are made by concatenating iocGui.db, iocAdminSoft.db or iocAdminVxWorks.db and iocAdminScanMon.db.
+
+DLS uses the upstream version with minor modifications to provide an IOC version in the record 
+$(IOCNAME):DLSVER derived from DLS filesystem path information.
+
+
+Release Notes
+
+3-1-14dls1-1 (Nov 2016)
+Modified iocbuilder support files
+
+3-1-14dls1-0 (Jun 2016) 
+vendor import from upstream release 3-1-14 to include windows ioc support
+
 
 **/
