@@ -23,7 +23,7 @@ class iocGui(AutoSubstitution):
     
 class devIocStatsHelper(ModuleBase):
     Dependencies = (_devIocStats,)
-    def __init__(self, name, ioc,
+    def __init__(self, ioc, name='',
                  scanMonitor=True, guiTags=True,
                  screen="ioc_stats_softdls.edl"):
         self.name = name
@@ -39,8 +39,8 @@ class devIocStatsHelper(ModuleBase):
 
     ArgInfo = makeArgInfo(
         __init__,
-        name = Simple("gui element name", str),
         ioc = Simple("ioc name", str),
+        name = Simple("gui element name", str),
         scanMonitor = Simple("choice to include scan monitor", bool),
         guiTags = Simple("choice to include gui tags", bool),
         screen = Simple("edm file for gui tags", str)

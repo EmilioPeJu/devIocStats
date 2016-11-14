@@ -1,6 +1,7 @@
 /**
 \mainpage devIocStats EPICS Support Module
 
+<h3>About this documentation</h3>
 These are documentation notes written by the DLS maintainers. 
 
 <h3>Introduction</h3>
@@ -74,11 +75,38 @@ deafults for all macros.<br>
 
 The templates ioc.db and ioc_vxworks.db with the macro IOCNAME will be removed in the future. They are made by concatenating iocGui.db, iocAdminSoft.db or iocAdminVxWorks.db and iocAdminScanMon.db.
 
+<h3>DLS notes</h3>
+
 DLS uses the upstream version with minor modifications to provide an IOC version in the record 
 $(IOCNAME):DLSVER derived from DLS filesystem path information.
 
+<h3>iocbuilder support since release 3-1-14dls1-1</h3>
 
-Release Notes
+In order to enable the removal of the templates ioc.db and
+ioc_vxworks.db in the future, a class devIocStatsHelper was added in
+release 3-1-14dls1-1 to assist in creating the devIocStats support for
+an IOC.
+
+As in the template expansion shown above, one only needs to enter an IOC name and True/False to also include the scanMonitor templates.
+
+For beamline gui generation, there is the guiTags flag that causes the inclusion of the iocGui templates.
+
+The screen parameter defaults to ioc_stats_softdls.edl, a screen that includes the DLSVER record.
+
+The entry for dls-xml-iocbuilder would be 
+<pre><code>&lt;devIocStats.devIocStatsHelper ioc=&quot;&lt;dom&gt;-&lt;tech&gt;-IOC-01&quot; /&gt;</code></pre>
+
+<h3>iocbuilder support in earlier releases</h3>
+
+The template ioc.db is used to provide builder support in earlier
+releases of devIocStats. Note that the name of the parameters does not
+match the upstream templates.
+The entry for dls-xml-iocbuilder would be 
+<pre><code>&lt;devIocStats.ioc IOCNAME=&quot;&lt;dom&gt;-&lt;tech&gt;-IOC-01&quot; name=&quot;&lt;dom&gt;-&lt;tech&gt;-IOC-01&quot;/&gt;</code></pre>
+<h3>DLS Release Notes</h3>
+
+3-1-14dls1-2 (Nov 2016)
+Update documentation to include notes on changes to iocbuilder support
 
 3-1-14dls1-1 (Nov 2016)
 Modified iocbuilder support files

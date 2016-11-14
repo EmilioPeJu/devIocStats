@@ -1,4 +1,4 @@
 <?xml version="1.0" ?>
-<components arch="linux-x86">
-	<devIocStats.defaultIocStats ioc_name="TEST-IOC"/>
+<components arch="linux-x86_64">
+	<devIocStats.devIocStatsHelper ioc="TEST-IOC" scanMonitor="True" guiTags="False"/>
 </components>
