@@ -3,6 +3,7 @@ include $(TOP)/configure/CONFIG
 
 DIRS += configure
 DIRS += devIocStats
+DIRS += devIocStatsApp
 DIRS += iocAdmin
 ifeq '$(MAKE_TEST_IOC_APP)' 'YES'
 DIRS += testIocStatsApp
