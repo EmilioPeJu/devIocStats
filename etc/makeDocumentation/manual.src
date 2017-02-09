@@ -105,6 +105,15 @@ The entry for dls-xml-iocbuilder would be
 <pre><code>&lt;devIocStats.ioc IOCNAME=&quot;&lt;dom&gt;-&lt;tech&gt;-IOC-01&quot; name=&quot;&lt;dom&gt;-&lt;tech&gt;-IOC-01&quot;/&gt;</code></pre>
 <h3>DLS Release Notes</h3>
 
+3-1-14dls2-1 (Feb 2017)
+Fix iocbuilder for windows re jira BC-277
+
+3-1-14dls2-0 (Jan 2017)
+CSS related changes 
+
+3-1-14dls1-3 (Dec 2016)
+Fix race condition with caserver initialisation
+
 3-1-14dls1-2 (Nov 2016)
 Update documentation to include notes on changes to iocbuilder support
 
