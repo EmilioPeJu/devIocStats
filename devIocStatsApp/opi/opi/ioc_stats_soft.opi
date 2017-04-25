@@ -10,7 +10,7 @@
   <background_color>
     <color name="grey-7" red="145" green="145" blue="145" />
   </background_color>
-  <boy_version>5.1.0.qualifier</boy_version>
+  <boy_version>5.1.0.201703300946</boy_version>
   <foreground_color>
     <color name="Black" red="0" green="0" blue="0" />
   </foreground_color>
@@ -56,7 +56,7 @@
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Liberation Sans" height="11" style="0">Default</opifont.name>
+      <opifont.name fontName="Liberation Sans" height="15" style="0" pixels="true">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -114,7 +114,7 @@ $(pv_value)</tooltip>
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Liberation Sans" height="11" style="0">Default</opifont.name>
+      <opifont.name fontName="Liberation Sans" height="15" style="0" pixels="true">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -172,7 +172,7 @@ $(pv_value)</tooltip>
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Liberation Sans" height="11" style="0">Default</opifont.name>
+      <opifont.name fontName="Liberation Sans" height="15" style="0" pixels="true">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -230,7 +230,7 @@ $(pv_value)</tooltip>
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Liberation Sans" height="11" style="0">Default</opifont.name>
+      <opifont.name fontName="Liberation Sans" height="15" style="0" pixels="true">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -288,7 +288,7 @@ $(pv_value)</tooltip>
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Liberation Sans" height="11" style="0">Default</opifont.name>
+      <opifont.name fontName="Liberation Sans" height="15" style="0" pixels="true">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -335,7 +335,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="10" style="0" />
+      <fontdata fontName="liberation sans" height="10" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -376,7 +376,7 @@ $(ioc)</text>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -416,7 +416,7 @@ $(ioc)</text>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -465,7 +465,7 @@ $(ioc)</text>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -512,7 +512,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -561,7 +561,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -601,7 +601,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -622,7 +622,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>71</width>
+    <width>72</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60e3</wuid>
     <x>15</x>
@@ -641,7 +641,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -681,7 +681,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -702,7 +702,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>54</width>
+    <width>53</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60e1</wuid>
     <x>15</x>
@@ -721,7 +721,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -764,7 +764,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -816,7 +816,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -868,7 +868,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -920,7 +920,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -972,7 +972,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -1024,7 +1024,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -1073,7 +1073,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1116,7 +1116,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -1165,7 +1165,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1186,7 +1186,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>72</width>
+    <width>71</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60d7</wuid>
     <x>330</x>
@@ -1208,7 +1208,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -1260,7 +1260,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -1312,7 +1312,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -1361,7 +1361,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1382,7 +1382,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>61</width>
+    <width>62</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60d3</wuid>
     <x>15</x>
@@ -1401,7 +1401,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1422,7 +1422,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>62</width>
+    <width>63</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60d2</wuid>
     <x>15</x>
@@ -1441,7 +1441,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1481,7 +1481,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1523,7 +1523,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -1565,7 +1565,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1608,13 +1608,13 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
       <color name="Monitor: FG" red="96" green="255" blue="96" />
     </foreground_color>
-    <format_type>1</format_type>
+    <format_type>4</format_type>
     <height>22</height>
     <horizontal_alignment>1</horizontal_alignment>
     <name>EDM Text Update</name>
@@ -1657,7 +1657,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1678,7 +1678,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>113</width>
+    <width>111</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60cc</wuid>
     <x>15</x>
@@ -1700,13 +1700,13 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
       <color name="Monitor: FG" red="96" green="255" blue="96" />
     </foreground_color>
-    <format_type>1</format_type>
+    <format_type>4</format_type>
     <height>27</height>
     <horizontal_alignment>0</horizontal_alignment>
     <name>EDM Text Update</name>
@@ -1749,7 +1749,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1770,7 +1770,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>73</width>
+    <width>71</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60ca</wuid>
     <x>15</x>
@@ -1792,13 +1792,13 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
       <color name="Monitor: FG" red="96" green="255" blue="96" />
     </foreground_color>
-    <format_type>1</format_type>
+    <format_type>4</format_type>
     <height>27</height>
     <horizontal_alignment>0</horizontal_alignment>
     <name>EDM Text Update</name>
@@ -1841,7 +1841,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -1862,7 +1862,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>61</width>
+    <width>62</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60c8</wuid>
     <x>15</x>
@@ -1892,7 +1892,7 @@ $(pv_value)</tooltip>
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Liberation Sans" height="11" style="0">Default</opifont.name>
+      <opifont.name fontName="Liberation Sans" height="15" style="0" pixels="true">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -1950,7 +1950,7 @@ $(pv_value)</tooltip>
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Liberation Sans" height="11" style="0">Default</opifont.name>
+      <opifont.name fontName="Liberation Sans" height="15" style="0" pixels="true">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2000,7 +2000,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2052,7 +2052,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2101,7 +2101,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2141,7 +2141,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2181,7 +2181,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2221,7 +2221,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2264,7 +2264,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2324,7 +2324,7 @@ $(pv_value)</tooltip>
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Liberation Sans" height="11" style="0">Default</opifont.name>
+      <opifont.name fontName="Liberation Sans" height="15" style="0" pixels="true">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2371,7 +2371,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2392,7 +2392,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>95</width>
+    <width>94</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60bd</wuid>
     <x>180</x>
@@ -2414,7 +2414,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2466,7 +2466,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2515,7 +2515,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2555,7 +2555,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2598,7 +2598,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2650,7 +2650,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2699,7 +2699,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2721,7 +2721,7 @@ Maximum</text>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>53</width>
+    <width>55</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60b6</wuid>
     <x>20</x>
@@ -2740,7 +2740,7 @@ Maximum</text>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2761,7 +2761,7 @@ Maximum</text>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>82</width>
+    <width>83</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60b5</wuid>
     <x>335</x>
@@ -2783,7 +2783,7 @@ Maximum</text>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2832,7 +2832,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2876,7 +2876,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -2925,7 +2925,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -2946,7 +2946,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>85</width>
+    <width>86</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60b1</wuid>
     <x>335</x>
@@ -2976,7 +2976,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3031,7 +3031,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3089,7 +3089,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3145,7 +3145,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3200,7 +3200,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3255,7 +3255,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3310,7 +3310,7 @@ $(pv_value)</tooltip>
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Liberation Sans" height="11" style="0">Default</opifont.name>
+      <opifont.name fontName="Liberation Sans" height="15" style="0" pixels="true">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3357,7 +3357,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -3378,7 +3378,7 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>129</width>
+    <width>131</width>
     <wrap_words>false</wrap_words>
     <wuid>-465d6598:159733e1956:-60a9</wuid>
     <x>130</x>
@@ -3400,7 +3400,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3452,7 +3452,7 @@ $(pv_value)</tooltip>
     <border_width>0</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3504,7 +3504,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3553,7 +3553,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -3593,7 +3593,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -3633,7 +3633,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -3673,7 +3673,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -3717,7 +3717,7 @@ since 1990</text>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3766,7 +3766,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <foreground_color>
       <color name="Text: FG" red="0" green="0" blue="0" />
@@ -3809,7 +3809,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Liberation Sans" height="10" style="0" />
+      <fontdata fontName="Liberation Sans" height="10" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
     <foreground_color>
@@ -3868,7 +3868,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="liberation sans" height="9" style="0" />
+      <fontdata fontName="liberation sans" height="9" style="0" pixels="false" />
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
