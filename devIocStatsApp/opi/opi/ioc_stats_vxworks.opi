@@ -4805,7 +4805,7 @@ $(pv_value)</tooltip>
     <name>EDM Text Update_34</name>
     <precision>1</precision>
     <precision_from_pv>false</precision_from_pv>
-    <pv_name>$(ioc):ST_SCRIPT</pv_name>
+    <pv_name>$(ioc):BOOTLINE</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
