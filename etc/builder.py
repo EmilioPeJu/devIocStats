@@ -28,7 +28,7 @@ class devIocStatsHelper(ModuleBase):
                  screen="ioc_stats_softdls.edl"):
         self.name = name
         self.ioc = ioc
-        if Architecture().startswith("linux") or Architecture().startswith("windows"):
+        if Architecture().startswith("linux") or Architecture().startswith("win"):
             iocAdminSoft(IOC= ioc)
         elif Architecture().startswith("vxWorks"):
             iocAdminVxWorks(IOC= ioc)
