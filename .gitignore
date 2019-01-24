@@ -12,6 +12,7 @@ envPaths
 /include/
 /edl/
 /restore/
+/data/
 
 # Local configuration
 *.local
@@ -19,3 +20,6 @@ envPaths
 # IDE configuration
 /QtC-*
 .deps
+
+# Temporary files
+*~
