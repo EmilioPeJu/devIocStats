@@ -11,6 +11,7 @@ EDL += ioc_stats_limits.edl
 EDL += ioc_stats_reboot_confirm.edl
 EDL += ioc_stats_release.edl
 EDL += ioc_stats_soft.edl
+EDL += ioc_stats_soft_embed.edl
 EDL += ioc_stats_vxworks.edl
 EDL += ioc_stats_scanmon.edl
 EDL += ioc_stats_reloadacf_confirm.edl
