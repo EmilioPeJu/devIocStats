@@ -13,6 +13,9 @@ envPaths
 /edl/
 /restore/
 /data/
+/documentation/doxygen
+/iocs
+/devIocStatsApp/opi/opi/runcss.sh
 
 # Local configuration
 *.local
